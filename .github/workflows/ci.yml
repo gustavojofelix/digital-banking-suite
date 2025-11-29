@@ -1,0 +1,42 @@
+name: CI
+
+on:
+    pull_request:
+        branches: [develop]
+    push:
+        branches: [develop]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: "9.0.x"
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "lts/*"
+
+            - name: Restore backend (if any)
+              run: |
+                  if [ -d "./src/backend" ]; then
+                    dotnet restore ./src/backend
+                  else
+                    echo "No backend projects yet."
+                  fi
+
+            - name: Restore frontend (if any)
+              run: |
+                  if [ -d "./src/frontend" ]; then
+                    cd src/frontend
+                    npm install
+                  else
+                    echo "No frontend workspace yet."
+                  fi
