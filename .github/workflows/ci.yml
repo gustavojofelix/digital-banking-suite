@@ -43,6 +43,14 @@ jobs:
             echo "No backend folder yet."
           fi
 
+      - name: Build backend solution (if present)
+        run: |
+          if [ -f "./src/backend/BankingSuite.Backend.sln" ]; then
+            echo "Building backend solution..."
+            dotnet build ./src/backend/BankingSuite.Backend.sln --configuration Release
+          else
+            echo "No backend solution found yet. Skipping build."
+          fi
       - name: Restore frontend (if any)
         run: |
           if [ -d "./src/frontend" ]; then
