@@ -1,42 +1,53 @@
 name: CI
 
 on:
-    pull_request:
-        branches: [develop]
-    push:
-        branches: [develop]
+  pull_request:
+    branches: [develop]
+  push:
+    branches: [develop]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Setup .NET
-              uses: actions/setup-dotnet@v4
-              with:
-                  dotnet-version: "9.0.x"
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "lts/*"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
 
-            - name: Restore backend (if any)
-              run: |
-                  if [ -d "./src/backend" ]; then
-                    dotnet restore ./src/backend
-                  else
-                    echo "No backend projects yet."
-                  fi
+      - name: Restore .NET backend projects (if any)
+        run: |
+          if [ -d "./src/backend" ]; then
+            # Find all .csproj files under src/backend
+            projects=$(find ./src/backend -name "*.csproj")
 
-            - name: Restore frontend (if any)
-              run: |
-                  if [ -d "./src/frontend" ]; then
-                    cd src/frontend
-                    npm install
-                  else
-                    echo "No frontend workspace yet."
-                  fi
+            if [ -z "$projects" ]; then
+              echo "No .NET backend projects found yet."
+            else
+              echo "Restoring .NET backend projects..."
+              for proj in $projects; do
+                echo "Restoring $proj"
+                dotnet restore "$proj"
+              done
+            fi
+          else
+            echo "No backend folder yet."
+          fi
+
+      - name: Restore frontend (if any)
+        run: |
+          if [ -d "./src/frontend" ]; then
+            cd src/frontend
+            npm install
+          else
+            echo "No frontend workspace yet."
+          fi
