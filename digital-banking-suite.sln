@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{FE360695-3F2B-1049-3887-35FBB5135923}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccountService", "AccountService", "{351E2584-98E5-D7AC-B47A-BBA37FB70642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService.Api", "src\backend\AccountService\AccountService.Api\AccountService.Api.csproj", "{873E0031-5D24-00A6-C4B6-0975C8A40633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{873E0031-5D24-00A6-C4B6-0975C8A40633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873E0031-5D24-00A6-C4B6-0975C8A40633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873E0031-5D24-00A6-C4B6-0975C8A40633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873E0031-5D24-00A6-C4B6-0975C8A40633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE360695-3F2B-1049-3887-35FBB5135923} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{351E2584-98E5-D7AC-B47A-BBA37FB70642} = {FE360695-3F2B-1049-3887-35FBB5135923}
+		{873E0031-5D24-00A6-C4B6-0975C8A40633} = {351E2584-98E5-D7AC-B47A-BBA37FB70642}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B256FDAC-58B5-44E1-BFDC-EA59D800D8F3}
+	EndGlobalSection
+EndGlobal

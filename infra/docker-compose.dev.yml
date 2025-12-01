@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  account-service:
+    image: banking-suite/account-service:dev
+    container_name: account-service
+    build:
+      context: ../src/backend/AccountService/AccountService.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      # Placeholder DB connection string, will be used later
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=accounts_db;Username=accounts_user;Password=accounts_password"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    container_name: postgres-accounts
+    restart: always
+    environment:
+      POSTGRES_DB: "accounts_db"
+      POSTGRES_USER: "accounts_user"
+      POSTGRES_PASSWORD: "accounts_password"
+    ports:
+      - "5432:5432"
+    volumes:
+      - accounts_pgdata:/var/lib/postgresql/data
+
+volumes:
+  accounts_pgdata:
