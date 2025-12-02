@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService.Api", "Accou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks.csproj", "{1C9F408E-C75D-41B8-A38C-0442D76792A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.UnitTests", "BuildingBlocks.UnitTests\BuildingBlocks.UnitTests.csproj", "{BECC3D15-6120-4AE6-A407-5039B50728E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{1C9F408E-C75D-41B8-A38C-0442D76792A6}.Release|x64.Build.0 = Release|Any CPU
 		{1C9F408E-C75D-41B8-A38C-0442D76792A6}.Release|x86.ActiveCfg = Release|Any CPU
 		{1C9F408E-C75D-41B8-A38C-0442D76792A6}.Release|x86.Build.0 = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|x64.Build.0 = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|x64.ActiveCfg = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|x64.Build.0 = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{BECC3D15-6120-4AE6-A407-5039B50728E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
