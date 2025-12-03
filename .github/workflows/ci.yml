@@ -60,6 +60,30 @@ jobs:
           else
             echo "No backend solution found yet. Skipping tests."
           fi
+
+      - name: Run backend tests with coverage
+        run: |
+          dotnet test src/backend/BankingSuite.Backend.sln \
+            /p:CollectCoverage=true \
+            /p:CoverletOutput=../../../lcov \
+            /p:CoverletOutputFormat=lcov
+
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Generate coverage report
+        run: |
+          reportgenerator \
+            -reports:lcov.info \
+            -targetdir:src/backend/coverage-report \
+            -reporttypes:Html;TextSummary
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage-report
+          path: src/backend/coverage-report
+
       - name: Restore frontend (if any)
         run: |
           if [ -d "./src/frontend" ]; then
