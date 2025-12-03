@@ -16,6 +16,11 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
+    <!-- Coverage support via Coverlet -->
+    <PackageReference Include="coverlet.msbuild" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

@@ -25,3 +25,10 @@ dist/
 # Misc
 *.tmp
 *.swp
+
+# Test / coverage outputs
+TestResults/
+coverage-report/
+coverage.info
+lcov.info
+coverage.cobertura.xml
