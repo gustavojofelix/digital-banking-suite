@@ -1,0 +1,56 @@
+name: Backend Tests & Coverage
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore dependencies
+        run: dotnet restore src/backend/BankingSuite.Backend.sln
+
+      - name: Build
+        run: dotnet build src/backend/BankingSuite.Backend.sln --no-restore
+
+      - name: Install ReportGenerator tool
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Run tests with coverage
+        run: |
+          dotnet test src/backend/BankingSuite.Backend.sln \
+            /p:CollectCoverage=true \
+            /p:CoverletOutput=../../lcov \
+            /p:CoverletOutputFormat=lcov
+
+      - name: Generate coverage report
+        run: |
+          reportgenerator \
+            -reports:lcov.info \
+            -targetdir:src/backend/coverage-report \
+            "-reporttypes:Html;TextSummary"
+        env:
+          PATH: $PATH:~/.dotnet/tools
+
+      - name: Upload coverage report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage-report
+          path: src/backend/coverage-report
