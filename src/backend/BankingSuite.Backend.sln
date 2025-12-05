@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService.Api", "Services\AccountService\AccountService.Api\AccountService.Api.csproj", "{9B650308-F006-4191-A121-ED2DE9389B83}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSuite.BuildingBlocks.Domain", "BuildingBlocks\BankingSuite.BuildingBlocks.Domain\BankingSuite.BuildingBlocks.Domain.csproj", "{CA2A6E04-FEC8-461D-829C-60DA619694E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSuite.BuildingBlocks.Application", "BuildingBlocks\BankingSuite.BuildingBlocks.Application\BankingSuite.BuildingBlocks.Application.csproj", "{FC84B55F-7487-4280-B61C-C28B826C9ABB}"
@@ -43,18 +41,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|x64.Build.0 = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Debug|x86.Build.0 = Debug|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|x64.ActiveCfg = Release|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|x64.Build.0 = Release|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|x86.ActiveCfg = Release|Any CPU
-		{9B650308-F006-4191-A121-ED2DE9389B83}.Release|x86.Build.0 = Release|Any CPU
 		{CA2A6E04-FEC8-461D-829C-60DA619694E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA2A6E04-FEC8-461D-829C-60DA619694E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA2A6E04-FEC8-461D-829C-60DA619694E0}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -180,7 +166,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9B650308-F006-4191-A121-ED2DE9389B83} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
 		{CA2A6E04-FEC8-461D-829C-60DA619694E0} = {E1F9F8FD-6AC9-441A-8B52-1D5B871A2E19}
 		{FC84B55F-7487-4280-B61C-C28B826C9ABB} = {E1F9F8FD-6AC9-441A-8B52-1D5B871A2E19}
 		{DA3D48C5-DB59-4A72-8260-390612EDFB3F} = {E1F9F8FD-6AC9-441A-8B52-1D5B871A2E19}
