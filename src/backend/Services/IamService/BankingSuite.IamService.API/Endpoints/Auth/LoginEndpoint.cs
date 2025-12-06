@@ -1,58 +1,63 @@
-﻿//using BankingSuite.IamService.Application.Auth;
-//using BankingSuite.IamService.Application.Auth.Dto;
-//using FastEndpoints;
-//using Microsoft.AspNetCore.Http;
-//using MediatR;
+﻿using BankingSuite.IamService.Application.Auth.Commands.Login;
+using FastEndpoints;
+using MediatR;
 
-//namespace BankingSuite.IamService.API.Endpoints.Auth;
+namespace BankingSuite.IamService.API.Endpoints.Auth;
 
-//public class LoginRequest
-//{
-//    public string Email { get; set; } = default!;
-//    public string Password { get; set; } = default!;
-//}
+public class LoginRequest
+{
+    public string Email { get; set; } = string.Empty;
 
-//public class LoginResponse
-//{
-//    public string AccessToken { get; set; } = default!;
-//    public DateTime ExpiresAt { get; set; }
-//}
+    public string Password { get; set; } = string.Empty;
+}
 
-//public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
-//{
-//    private readonly IMediator _mediator;
+public class LoginResponse
+{
+    public string AccessToken { get; set; } = string.Empty;
 
-//    public LoginEndpoint(IMediator mediator)
-//    {
-//        _mediator = mediator;
-//    }
+    public DateTime ExpiresAtUtc { get; set; }
+}
 
-//    public override void Configure()
-//    {
-//        Post("/auth/login");
-//        AllowAnonymous();
-//        Summary(s =>
-//        {
-//            s.Summary = "Login and receive a JWT access token";
-//        });
-//    }
+public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
+{
+    private readonly IMediator _mediator;
 
-//    public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
-//    {
-//        var result = await _mediator.Send(new LoginCommand(req.Email, req.Password), ct);
+    public LoginEndpoint(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
 
-//        if (result is null)
-//        {
-//            HttpContext.Response.StatusCode = StatusCodes.Status401Unauthorized;
-//            await HttpContext.Response.CompleteAsync();
-//            return;
-//        }
+    public override void Configure()
+    {
+        Post("/auth/login");
+        AllowAnonymous();
 
-//        HttpContext.Response.StatusCode = StatusCodes.Status200OK;
-//        await HttpContext.Response.WriteAsJsonAsync(new LoginResponse
-//        {
-//            AccessToken = result.AccessToken,
-//            ExpiresAt = result.ExpiresAt
-//        }, cancellationToken: ct);
-//    }
-//}
+        Summary(s =>
+        {
+            s.Summary = "Login and receive a JWT access token.";
+            s.Description = "Validates credentials and issues a JWT used by other microservices.";
+        });
+    }
+
+    public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
+    {
+        var result = await _mediator.Send(
+            new LoginCommand(req.Email, req.Password),
+            ct);
+
+        if (result.IsFailure)
+        {
+            AddError(result.Error ?? "Login failed.");
+            await Send.ErrorsAsync(cancellation: ct);
+            return;
+        }
+
+        var value = result.Value!;
+
+        await Send.OkAsync(new LoginResponse
+        {
+            AccessToken = value.AccessToken,
+            ExpiresAtUtc = value.ExpiresAtUtc
+        }, cancellation: ct);
+    }
+}

@@ -1,4 +1,5 @@
-﻿using FastEndpoints;
+﻿using BankingSuite.IamService.Infrastructure;
+using FastEndpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,13 +8,15 @@ builder.Services.AddFastEndpoints();
 
 // 🔧 Add this line so Swagger/OpenAPI has API Explorer
 builder.Services.AddEndpointsApiExplorer();
-
 // Add Swagger for FastEndpoints
 builder.Services.AddSwaggerDocument(config =>
 {
     config.Title = "Alvor Bank - IAM Service";
     config.Version = "v1";
 });
+
+// IAM infrastructure (Identity + EF Core + JWT + MediatR)
+builder.Services.AddIamInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -30,14 +33,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// Minimal health endpoint (no auth yet)
-//app.MapGet("/health", () => Results.Ok(new
-//{
-//    Service = "IamService",
-//    Status = "Healthy",
-//    TimestampUtc = DateTime.UtcNow
-//}));
-
 app.Run();
 
+// For WebApplicationFactory in test
 public partial class Program;
