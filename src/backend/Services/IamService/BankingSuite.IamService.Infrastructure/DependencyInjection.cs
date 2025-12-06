@@ -1,124 +1,95 @@
-using BankingSuite.BuildingBlocks.Application.Abstractions;
-using BankingSuite.IamService.Application.Common.Interfaces;
+﻿using System.Reflection;
+using System.Text;
+using BankingSuite.IamService.Application.Auth;
 using BankingSuite.IamService.Domain.Users;
-using BankingSuite.IamService.Infrastructure.Auth;
-using BankingSuite.IamService.Infrastructure.Identity;
 using BankingSuite.IamService.Infrastructure.Persistence;
+using BankingSuite.IamService.Infrastructure.Security;
+using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BankingSuite.IamService.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(
+    public static IServiceCollection AddIamInfrastructure(
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddDbContext<IamDbContext>(options =>
-        {
-            options.UseNpgsql(configuration.GetConnectionString("IamDatabase"));
-        });
+        // Database
+        var connectionString = configuration.GetConnectionString("IamDatabase");
 
+        services.AddDbContext<IamDbContext>(options =>
+            options.UseNpgsql(connectionString));
+
+        // Identity
         services
-            .AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
+            .AddIdentityCore<ApplicationUser>(options =>
             {
                 options.User.RequireUniqueEmail = true;
+
+                options.Password.RequiredLength = 8;
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequiredLength = 6;
 
-                options.Lockout.MaxFailedAccessAttempts = 5;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                options.Lockout.AllowedForNewUsers = true;
             })
+            .AddRoles<ApplicationRole>()
             .AddEntityFrameworkStores<IamDbContext>()
-            .AddDefaultTokenProviders();
+            .AddSignInManager<SignInManager<ApplicationUser>>();
 
-        services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
+        // JWT options
+        services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
 
-        services.AddScoped<IIdentityService, IdentityService>();
+        var jwtOptions = configuration.GetSection(JwtOptions.SectionName).Get<JwtOptions>() ?? new JwtOptions();
+        var keyBytes = Encoding.UTF8.GetBytes(jwtOptions.Key);
 
-        // Simple UnitOfWork for IAM (for future additional entities)
-        services.AddScoped<IUnitOfWork, IamUnitOfWork>();
+        // Authentication + JWT bearer
+        services
+            .AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidIssuer = jwtOptions.Issuer,
+                    ValidAudience = jwtOptions.Audience,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.FromMinutes(1)
+                };
+            });
+
+        // Authorization
+        services.AddAuthorization();
+
+        // JWT service
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+
+        // MediatR - scan IAM Application assembly
+        var applicationAssembly = Assembly.Load("BankingSuite.IamService.Application");
+
+        services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssembly(applicationAssembly);
+        });
 
         return services;
     }
-
-    public static async Task SeedIdentityAsync(IServiceProvider services, ILogger logger)
-    {
-        using var scope = services.CreateScope();
-        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
-        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-
-        foreach (var roleName in RoleNames.All)
-        {
-            if (!await roleManager.RoleExistsAsync(roleName))
-            {
-                var result = await roleManager.CreateAsync(new IdentityRole<Guid>
-                {
-                    Id = Guid.NewGuid(),
-                    Name = roleName,
-                    NormalizedName = roleName.ToUpperInvariant()
-                });
-
-                if (!result.Succeeded)
-                {
-                    logger.LogError("Failed to create role {Role}: {Errors}", roleName,
-                        string.Join(", ", result.Errors.Select(e => e.Description)));
-                }
-            }
-        }
-
-        const string adminEmail = "admin@alvorbank.co.mz";
-        const string adminPassword = "Admin123!";
-
-        var adminUser = await userManager.FindByEmailAsync(adminEmail);
-        if (adminUser is null)
-        {
-            adminUser = new ApplicationUser
-            {
-                Id = Guid.NewGuid(),
-                Email = adminEmail,
-                UserName = adminEmail,
-                DisplayName = "System Administrator",
-                UserType = UserType.Employee,
-                IsActive = true
-            };
-
-            var createResult = await userManager.CreateAsync(adminUser, adminPassword);
-            if (!createResult.Succeeded)
-            {
-                logger.LogError("Failed to create admin user: {Errors}",
-                    string.Join(", ", createResult.Errors.Select(e => e.Description)));
-                return;
-            }
-
-            var roleResult = await userManager.AddToRoleAsync(adminUser, RoleNames.SystemAdmin);
-            if (!roleResult.Succeeded)
-            {
-                logger.LogError("Failed to assign SystemAdmin role: {Errors}",
-                    string.Join(", ", roleResult.Errors.Select(e => e.Description)));
-            }
-
-            logger.LogInformation("Seeded SystemAdmin user with email {Email}", adminEmail);
-        }
-    }
-}
-
-public class IamUnitOfWork : IUnitOfWork
-{
-    private readonly IamDbContext _dbContext;
-
-    public IamUnitOfWork(IamDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
-    public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        => _dbContext.SaveChangesAsync(cancellationToken);
 }

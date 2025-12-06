@@ -1,5 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <!--<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+  </ItemGroup>-->
+
+	<ItemGroup>
+		<!-- Gives you Microsoft.AspNetCore.Identity, etc. -->
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\BankingSuite.BuildingBlocks.Domain.csproj" />
   </ItemGroup>
