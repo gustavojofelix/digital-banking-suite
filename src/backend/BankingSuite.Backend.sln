@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11222.15 d18.0
+VisualStudioVersion = 18.0.11222.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSuite.BuildingBlocks.Domain", "BuildingBlocks\BankingSuite.BuildingBlocks.Domain\BankingSuite.BuildingBlocks.Domain.csproj", "{CA2A6E04-FEC8-461D-829C-60DA619694E0}"
 EndProject
@@ -30,6 +30,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSuite.IamService.UnitTests", "..\..\tests\BankingSuite.IamService.UnitTests\BankingSuite.IamService.UnitTests.csproj", "{4F052EDB-1F1F-4709-B024-DDB6B4B68BF9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSuite.IamService.IntegrationTests", "..\..\tests\BankingSuite.IamService.IntegrationTests\BankingSuite.IamService.IntegrationTests.csproj", "{C89C8C37-8267-4BED-9CFC-AEE7E18A87A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerService", "CustomerService", "{7E0FB731-31F8-4969-8AEC-38962E04A499}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccountService", "AccountService", "{660C7E06-89F6-44DB-9125-A418748627B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TransactionService", "TransactionService", "{E6FFCBC8-0057-47F2-BD82-2A27BFD6DB15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +183,9 @@ Global
 		{2489C5DA-B153-43C4-8502-741FBAEEC300} = {7C22AA2B-1999-8B37-A76C-08567B7324E9}
 		{4F052EDB-1F1F-4709-B024-DDB6B4B68BF9} = {D11FDFDB-9C3C-46CB-8A5C-C26B3D0EAB41}
 		{C89C8C37-8267-4BED-9CFC-AEE7E18A87A7} = {D11FDFDB-9C3C-46CB-8A5C-C26B3D0EAB41}
+		{7E0FB731-31F8-4969-8AEC-38962E04A499} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{660C7E06-89F6-44DB-9125-A418748627B5} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{E6FFCBC8-0057-47F2-BD82-2A27BFD6DB15} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D863E938-80AF-4CDC-ADCB-59C9FB9F4B1A}
