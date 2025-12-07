@@ -26,8 +26,7 @@ builder.Services.AddIamInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
-// Apply migrations and seed IAM data (roles + default admin)
-await IamDbContextSeed.SeedAsync(app.Services);
+
 
 // existing middleware/endpoint configuration
 app.UseAuthentication();
@@ -39,6 +38,9 @@ app.UseFastEndpoints();
 // Enable Swagger UI (dev only)
 if (app.Environment.IsDevelopment())
 {
+    // Apply migrations and seed IAM data (roles + default admin)
+    await IamDbContextSeed.SeedAsync(app.Services);
+
     // FastEndpoints helper: adds OpenAPI + Swagger UI with sane defaults
     app.UseSwaggerGen();
 }
