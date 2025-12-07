@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace BankingSuite.IamService.Domain.Users;
 
@@ -16,5 +17,8 @@ public class ApplicationUser : IdentityUser<Guid>
 
     public DateTime? DeactivatedAtUtc { get; set; }
 
+    public DateTimeOffset? LastLoginAt { get; set; }
+
+    [NotMapped]
     public string FullName => $"{FirstName} {LastName}".Trim();
 }
