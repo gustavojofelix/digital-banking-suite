@@ -1,4 +1,6 @@
-﻿using BankingSuite.IamService.Infrastructure;
+﻿using BankingSuite.IamService.API.Common;
+using BankingSuite.IamService.Application.Common.Interfaces;
+using BankingSuite.IamService.Infrastructure;
 using BankingSuite.IamService.Infrastructure.Persistence;
 using FastEndpoints;
 using FastEndpoints.Swagger; // 👈 important for SwaggerDocument / UseSwaggerGen
@@ -23,6 +25,10 @@ builder.Services
 
 // IAM infrastructure (Identity + EF Core + JWT + MediatR)
 builder.Services.AddIamInfrastructure(builder.Configuration);
+
+// 👇 add these two lines
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 
 var app = builder.Build();
 

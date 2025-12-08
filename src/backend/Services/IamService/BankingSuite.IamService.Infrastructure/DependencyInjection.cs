@@ -1,7 +1,9 @@
 ﻿using System.Reflection;
 using System.Text;
 using BankingSuite.IamService.Application.Auth;
+using BankingSuite.IamService.Application.Common.Interfaces;
 using BankingSuite.IamService.Domain.Users;
+using BankingSuite.IamService.Infrastructure.Email;
 using BankingSuite.IamService.Infrastructure.Persistence;
 using BankingSuite.IamService.Infrastructure.Security;
 using MediatR;
@@ -44,6 +46,7 @@ public static class DependencyInjection
             })
             .AddRoles<ApplicationRole>()
             .AddEntityFrameworkStores<IamDbContext>()
+            .AddDefaultTokenProviders() // <- important for email + password tokens
             .AddSignInManager<SignInManager<ApplicationUser>>();
 
         // JWT options
@@ -81,6 +84,7 @@ public static class DependencyInjection
 
         // JWT service
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+        services.AddScoped<IEmailSender, LoggingEmailSender>();
 
         // MediatR - scan IAM Application assembly
         var applicationAssembly = Assembly.Load("BankingSuite.IamService.Application");
