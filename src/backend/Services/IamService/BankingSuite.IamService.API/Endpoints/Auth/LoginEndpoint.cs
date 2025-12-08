@@ -15,7 +15,7 @@ public class LoginResponse
 {
     public string AccessToken { get; set; } = string.Empty;
 
-    public DateTime ExpiresAtUtc { get; set; }
+    public DateTime? ExpiresAtUtc { get; set; }
 }
 
 public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
@@ -45,19 +45,16 @@ public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
             new LoginCommand(req.Email, req.Password),
             ct);
 
-        if (result.IsFailure)
+        if (result is null)
         {
-            AddError(result.Error ?? "Login failed.");
             await Send.ErrorsAsync(cancellation: ct);
             return;
         }
 
-        var value = result.Value!;
-
         await Send.OkAsync(new LoginResponse
         {
-            AccessToken = value.AccessToken,
-            ExpiresAtUtc = value.ExpiresAtUtc
+            AccessToken = result.AccessToken!,
+            ExpiresAtUtc = result.ExpiresAt
         }, cancellation: ct);
     }
 }
