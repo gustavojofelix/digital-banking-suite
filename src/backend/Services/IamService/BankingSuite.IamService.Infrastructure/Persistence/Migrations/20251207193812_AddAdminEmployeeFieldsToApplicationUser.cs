@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BankingSuite.IamService.Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class AddAdminEmployeeFieldsToApplicationUser : Migration
+public partial class AddAdminEmployeeFieldsToApplicationUser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

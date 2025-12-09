@@ -14,7 +14,6 @@ public sealed class EnableTwoFactorEndpoint(IMediator mediator) : Endpoint<TwoFa
     public override void Configure()
     {
         Post("/api/iam/auth/2fa/enable");
-        Roles("Employee", "IamAdmin", "SuperAdmin"); // adjust role names as needed
         Summary(s =>
         {
             s.Summary = "Enable 2FA for the current employee using their password.";
@@ -33,7 +32,6 @@ public sealed class DisableTwoFactorEndpoint(IMediator mediator) : Endpoint<TwoF
     public override void Configure()
     {
         Post("/api/iam/auth/2fa/disable");
-        Roles("Employee", "IamAdmin", "SuperAdmin");
         Summary(s =>
         {
             s.Summary = "Disable 2FA for the current employee using their password.";

@@ -5,9 +5,11 @@ using System.Net.Http.Json;
 using System.Text;
 using BankingSuite.IamService.IntegrationTests.Infrastructure;
 using FluentAssertions;
+using Xunit;
 
 namespace BankingSuite.IamService.IntegrationTests.Admin;
 
+[Collection("IamApiFactory collection")]
 public sealed class AdminEmployeesTests(IamApiFactory factory) : IntegrationTestBase(factory)
 {
     private const string AdminRole = "IamAdmin";

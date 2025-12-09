@@ -6,9 +6,11 @@ using System.Text;
 using BankingSuite.IamService.IntegrationTests.Infrastructure;
 using FastEndpoints;
 using FluentAssertions;
+using Xunit;
 
 namespace BankingSuite.IamService.IntegrationTests.Auth;
 
+[Collection("IamApiFactory collection")]
 public sealed class TwoFactorTests(IamApiFactory factory) : IntegrationTestBase(factory)
 {
     private const string Password = "Password123!";

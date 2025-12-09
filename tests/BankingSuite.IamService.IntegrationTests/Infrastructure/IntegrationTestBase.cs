@@ -5,6 +5,7 @@ using System.Text;
 using BankingSuite.IamService.Domain.Users;
 using BankingSuite.IamService.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BankingSuite.IamService.IntegrationTests.Infrastructure;
@@ -22,13 +23,13 @@ public abstract class IntegrationTestBase : IClassFixture<IamApiFactory>, IAsync
 
     public virtual async Task InitializeAsync()
     {
-        // Optional: clear DB between tests if using a shared factory
         using var scope = Factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<IamDbContext>();
 
-        db.Users.RemoveRange(db.Users);
-        db.Roles.RemoveRange(db.Roles);
-        await db.SaveChangesAsync();
+        await db.Database.EnsureDeletedAsync();
+        await db.Database.EnsureCreatedAsync();
+
+        Factory.SentEmails.Clear();
     }
 
     public Task DisposeAsync() => Task.CompletedTask;
@@ -62,6 +63,12 @@ public abstract class IntegrationTestBase : IClassFixture<IamApiFactory>, IAsync
             throw new InvalidOperationException($"Failed to create test user: {errors}");
         }
 
+        var persisted = await userManager.FindByEmailAsync(email);
+        if (persisted is null)
+        {
+            throw new InvalidOperationException("User not found immediately after creation.");
+        }
+
         return user;
     }
 
@@ -87,7 +94,19 @@ public abstract class IntegrationTestBase : IClassFixture<IamApiFactory>, IAsync
     {
         var response = await Client.PostAsJsonAsync("/api/iam/auth/login", new { email, password });
 
-        response.EnsureSuccessStatusCode();
+        if (!response.IsSuccessStatusCode)
+        {
+            var body = await response.Content.ReadAsStringAsync();
+            using var scope = Factory.Services.CreateScope();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var user = await userManager.FindByEmailAsync(email);
+            var passwordValid = user is not null && await userManager.CheckPasswordAsync(user, password);
+
+            throw new InvalidOperationException(
+                $"Login failed ({response.StatusCode}): {body} | userExists={user is not null}, passwordValid={passwordValid}"
+            );
+        }
 
         var json = await response.Content.ReadFromJsonAsync<LoginResponseForTests>();
 

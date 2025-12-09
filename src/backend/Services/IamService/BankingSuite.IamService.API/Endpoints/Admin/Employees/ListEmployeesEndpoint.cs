@@ -12,17 +12,21 @@ public sealed class ListEmployeesEndpoint(IMediator mediator)
 {
     public override void Configure()
     {
-        Post("/api/iam/admin/employees");
+        Verbs(Http.GET, Http.POST);
+        Routes("/api/iam/admin/employees");
         Roles("IamAdmin", "SuperAdmin"); // adjust role names to your scheme
         // Group<IamAdminGroup>(); // if you use FastEndpoints groups
     }
 
     public override async Task HandleAsync(ListEmployeesRequest req, CancellationToken ct)
     {
+        var pageNumber = req.PageNumber <= 0 ? 1 : req.PageNumber;
+        var pageSize = req.PageSize <= 0 ? 20 : req.PageSize;
+
         var result = await mediator.Send(
             new ListEmployeesQuery(
-                PageNumber: req.PageNumber,
-                PageSize: req.PageSize,
+                PageNumber: pageNumber,
+                PageSize: pageSize,
                 Search: req.Search,
                 IncludeInactive: req.IncludeInactive),
             ct);

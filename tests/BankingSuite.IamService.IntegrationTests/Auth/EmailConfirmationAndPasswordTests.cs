@@ -7,9 +7,11 @@ using System.Web;
 using BankingSuite.IamService.IntegrationTests.Infrastructure;
 using FastEndpoints;
 using FluentAssertions;
+using Xunit;
 
 namespace BankingSuite.IamService.IntegrationTests.Auth;
 
+[Collection("IamApiFactory collection")]
 public sealed class EmailConfirmationAndPasswordTests(IamApiFactory factory)
     : IntegrationTestBase(factory)
 {

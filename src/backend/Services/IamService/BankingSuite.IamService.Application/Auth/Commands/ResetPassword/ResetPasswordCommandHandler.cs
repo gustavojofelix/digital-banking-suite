@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BankingSuite.IamService.Domain.Users;
 using MediatR;
@@ -32,6 +33,20 @@ public sealed class ResetPasswordCommandHandler(UserManager<ApplicationUser> use
             request.NewPassword
         );
 
+        if (!result.Succeeded && HasConcurrencyError(result))
+        {
+            // Retry once with a fresh user instance to avoid stale concurrency stamps.
+            user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null)
+                return Unit.Value;
+
+            result = await _userManager.ResetPasswordAsync(
+                user,
+                request.Token,
+                request.NewPassword
+            );
+        }
+
         if (!result.Succeeded)
         {
             var errors = string.Join("; ", result.Errors.Select(e => e.Description));
@@ -40,4 +55,8 @@ public sealed class ResetPasswordCommandHandler(UserManager<ApplicationUser> use
 
         return Unit.Value;
     }
+
+    private static bool HasConcurrencyError(IdentityResult result) =>
+        result.Errors.Any(e => e.Code == nameof(IdentityErrorDescriber.ConcurrencyFailure));
 }
+

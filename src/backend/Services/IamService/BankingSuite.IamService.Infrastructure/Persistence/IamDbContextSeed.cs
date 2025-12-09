@@ -1,4 +1,5 @@
-﻿using BankingSuite.IamService.Domain;
+using System.Diagnostics.CodeAnalysis;
+using BankingSuite.IamService.Domain;
 using BankingSuite.IamService.Domain.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BankingSuite.IamService.Infrastructure.Persistence;
 
+[ExcludeFromCodeCoverage]
 public static class IamDbContextSeed
 {
     public static async Task SeedAsync(IServiceProvider services)
@@ -77,3 +79,4 @@ public static class IamDbContextSeed
         }
     }
 }
+

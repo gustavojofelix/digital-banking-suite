@@ -2,6 +2,7 @@
 using System;
 using BankingSuite.IamService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -10,6 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BankingSuite.IamService.Infrastructure.Migrations
 {
+    [ExcludeFromCodeCoverage]
     [DbContext(typeof(IamDbContext))]
     partial class IamDbContextModelSnapshot : ModelSnapshot
     {
