@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\BankingSuite.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\BankingSuite.IamService.Domain\BankingSuite.IamService.Domain.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\BankingSuite.BuildingBlocks.Application\BankingSuite.BuildingBlocks.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,101 @@
+version: "3.9"
+
+services:
+  # PostgreSQL for IAM Service
+  iam-db:
+    image: postgres:16
+    container_name: iam-db
+    environment:
+      POSTGRES_USER: iam_user
+      POSTGRES_PASSWORD: iam_password
+      POSTGRES_DB: iam_service_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - iam-db-data:/var/lib/postgresql/data
+    networks:
+      - bankingsuite-network
+
+  # PostgreSQL for Customer Service
+  customer-db:
+    image: postgres:16
+    container_name: customer-db
+    environment:
+      POSTGRES_USER: customer_user
+      POSTGRES_PASSWORD: customer_password
+      POSTGRES_DB: customer_service_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - customer-db-data:/var/lib/postgresql/data
+    networks:
+      - bankingsuite-network
+
+  # PostgreSQL for Account Service
+  account-db:
+    image: postgres:16
+    container_name: account-db
+    environment:
+      POSTGRES_USER: account_user
+      POSTGRES_PASSWORD: account_password
+      POSTGRES_DB: account_service_db
+    ports:
+      - "5435:5432"
+    volumes:
+      - account-db-data:/var/lib/postgresql/data
+    networks:
+      - bankingsuite-network
+
+  # PostgreSQL for Transaction Service
+  transaction-db:
+    image: postgres:16
+    container_name: transaction-db
+    environment:
+      POSTGRES_USER: transaction_user
+      POSTGRES_PASSWORD: transaction_password
+      POSTGRES_DB: transaction_service_db
+    ports:
+      - "5436:5432"
+    volumes:
+      - transaction-db-data:/var/lib/postgresql/data
+    networks:
+      - bankingsuite-network
+
+  # PostgreSQL for Notification Service (optional but keeps pattern consistent)
+  notification-db:
+    image: postgres:16
+    container_name: notification-db
+    environment:
+      POSTGRES_USER: notification_user
+      POSTGRES_PASSWORD: notification_password
+      POSTGRES_DB: notification_service_db
+    ports:
+      - "5437:5432"
+    volumes:
+      - notification-db-data:/var/lib/postgresql/data
+    networks:
+      - bankingsuite-network
+
+  # RabbitMQ broker for messaging
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # AMQP
+      - "15672:15672" # Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+    networks:
+      - bankingsuite-network
+
+networks:
+  bankingsuite-network:
+    driver: bridge
+
+volumes:
+  iam-db-data:
+  customer-db-data:
+  account-db-data:
+  transaction-db-data:
+  notification-db-data:
