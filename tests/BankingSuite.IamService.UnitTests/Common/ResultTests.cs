@@ -47,4 +47,16 @@ public class ResultTests
         result.Value.Should().Be(expected);
         result.Error.Should().BeNull();
     }
+
+    [Fact]
+    public void Generic_Failure_Should_Set_Error_And_Default_Value()
+    {
+        const string errorMessage = "fail";
+
+        var result = Result.Failure<int>(errorMessage);
+
+        result.IsSuccess.Should().BeFalse();
+        result.Value.Should().Be(default);
+        result.Error.Should().Be(errorMessage);
+    }
 }

@@ -1,0 +1,3350 @@
+{
+  "BankingSuite.BuildingBlocks.Application.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\BuildingBlocks\\BankingSuite.BuildingBlocks.Application\\Models\\PagedResult.cs": {
+      "BankingSuite.BuildingBlocks.Application.Models.PagedResult`1": {
+        "System.Collections.Generic.IReadOnlyList`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_Items()": {
+          "Lines": {
+            "4": 3
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageNumber()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageSize()": {
+          "Lines": {
+            "6": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalCount()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalPages()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasNextPage()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasPreviousPage()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Application.Models.PagedResult`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::Empty(System.Int32,System.Int32)": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::.ctor(System.Collections.Generic.IReadOnlyList`1<T>,System.Int32,System.Int32,System.Int32)": {
+          "Lines": {
+            "3": 2,
+            "8": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BankingSuite.BuildingBlocks.Domain.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\BuildingBlocks\\BankingSuite.BuildingBlocks.Domain\\Abstractions\\Entity.cs": {
+      "BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1": {
+        "TId BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::get_Id()": {
+          "Lines": {
+            "5": 24
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::Equals(System.Object)": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 0,
+            "19": 4,
+            "20": 0,
+            "22": 4,
+            "23": 2,
+            "25": 2,
+            "26": 4
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 19,
+              "Offset": 29,
+              "EndOffset": 31,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 29,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 22,
+              "Offset": 66,
+              "EndOffset": 68,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 22,
+              "Offset": 66,
+              "EndOffset": 101,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 22,
+              "Offset": 106,
+              "EndOffset": 108,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 22,
+              "Offset": 106,
+              "EndOffset": 112,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Equality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)": {
+          "Lines": {
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 2,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 13,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 20,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 31,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Inequality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)": {
+          "Lines": {
+            "35": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::GetHashCode()": {
+          "Lines": {
+            "37": 2
+          },
+          "Branches": [
+            {
+              "Line": 37,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 20,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor(TId)": {
+          "Lines": {
+            "7": 4,
+            "8": 4,
+            "9": 4,
+            "10": 4
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor()": {
+          "Lines": {
+            "12": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\BuildingBlocks\\BankingSuite.BuildingBlocks.Domain\\Abstractions\\Result.cs": {
+      "BankingSuite.BuildingBlocks.Domain.Abstractions.Result": {
+        "System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsSuccess()": {
+          "Lines": {
+            "5": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsFailure()": {
+          "Lines": {
+            "6": 2
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_Error()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success()": {
+          "Lines": {
+            "15": 1
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)": {
+          "Lines": {
+            "18": 1
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success(T)": {
+          "Lines": {
+            "20": 2
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)": {
+          "Lines": {
+            "22": 2
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result::.ctor(System.Boolean,System.String)": {
+          "Lines": {
+            "9": 6,
+            "10": 6,
+            "11": 6,
+            "12": 6,
+            "13": 6
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1": {
+        "T BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::get_Value()": {
+          "Lines": {
+            "27": 2
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Success(T)": {
+          "Lines": {
+            "36": 2
+          },
+          "Branches": []
+        },
+        "BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Failure(System.String)": {
+          "Lines": {
+            "39": 2
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::.ctor(System.Boolean,T,System.String)": {
+          "Lines": {
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\BuildingBlocks\\BankingSuite.BuildingBlocks.Domain\\Abstractions\\AggregateRoot.cs": {
+      "BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1": {
+        "System.Collections.Generic.IReadOnlyCollection`1<BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent> BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::get_DomainEvents()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::AddDomainEvent(BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent)": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::ClearDomainEvents()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::.ctor()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BankingSuite.BuildingBlocks.Infrastructure.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\BuildingBlocks\\BankingSuite.BuildingBlocks.Infrastructure\\Persistence\\RepositoryBase.cs": {
+      "BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1": {
+        "System.Threading.Tasks.Task`1<TAggregate> BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::GetByIdAsync(System.Guid,System.Threading.CancellationToken)": {
+          "Lines": {
+            "19": 2
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::AddAsync(TAggregate,System.Threading.CancellationToken)": {
+          "Lines": {
+            "22": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::Remove(TAggregate)": {
+          "Lines": {
+            "24": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BankingSuite.IamService.Application.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\DependencyInjection.cs": {
+      "BankingSuite.IamService.Application.DependencyInjection": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Application.DependencyInjection::AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Queries\\ListEmployees\\ListEmployeesQuery.cs": {
+      "BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery": {
+        "System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageNumber()": {
+          "Lines": {
+            "8": 4
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageSize()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_Search()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_IncludeInactive()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::.ctor(System.Int32,System.Int32,System.String,System.Boolean)": {
+          "Lines": {
+            "7": 2,
+            "12": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Queries\\ListEmployees\\ListEmployeesQueryHandler.cs": {
+      "BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler": {
+        "System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "17": 2,
+            "18": 2
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "24": 2,
+            "25": 2,
+            "27": 2,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "32": 2,
+            "33": 1,
+            "34": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "46": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "54": 2,
+            "56": 10,
+            "57": 2,
+            "58": 2,
+            "60": 2,
+            "61": 2,
+            "62": 2,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "68": 2,
+            "69": 2,
+            "70": 2,
+            "71": 2,
+            "72": 2,
+            "74": 2,
+            "75": 2,
+            "76": 2,
+            "77": 2,
+            "78": 2,
+            "79": 2,
+            "80": 2
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 86,
+              "EndOffset": 88,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 27,
+              "Offset": 86,
+              "EndOffset": 164,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 187,
+              "EndOffset": 192,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 187,
+              "EndOffset": 919,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 56,
+              "Offset": 1676,
+              "EndOffset": 1349,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 56,
+              "Offset": 1676,
+              "EndOffset": 1681,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Queries\\GetEmployeeDetails\\GetEmployeeDetailsQuery.cs": {
+      "BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQuery": {
+        "System.Guid BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQuery::get_EmployeeId()": {
+          "Lines": {
+            "6": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Queries\\GetEmployeeDetails\\GetEmployeeDetailsQueryHandler.cs": {
+      "BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler": {
+        "System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "16": 2,
+            "17": 2
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "27": 2,
+            "28": 1,
+            "30": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 2
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 356,
+              "EndOffset": 358,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 27,
+              "Offset": 356,
+              "EndOffset": 365,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Dtos\\EmployeeDto.cs": {
+      "BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto": {
+        "System.Guid BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Id()": {
+          "Lines": {
+            "5": 3
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Email()": {
+          "Lines": {
+            "6": 8
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_FullName()": {
+          "Lines": {
+            "7": 4
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_EmailConfirmed()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_IsActive()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_TwoFactorEnabled()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "System.String[] BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Roles()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto": {
+        "System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_PhoneNumber()": {
+          "Lines": {
+            "16": 1
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LockoutEnd()": {
+          "Lines": {
+            "17": 1
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LastLoginAt()": {
+          "Lines": {
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Commands\\UpdateEmployee\\UpdateEmployeeCommand.cs": {
+      "BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand": {
+        "System.Guid BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_EmployeeId()": {
+          "Lines": {
+            "6": 2
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_FullName()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_PhoneNumber()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        },
+        "System.String[] BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_Roles()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::.ctor(System.Guid,System.String,System.String,System.String[])": {
+          "Lines": {
+            "5": 2,
+            "10": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Commands\\UpdateEmployee\\UpdateEmployeeCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "14": 2,
+            "15": 2
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_2(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_3(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "59": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "22": 2,
+            "23": 1,
+            "28": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "33": 0,
+            "35": 0,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 0,
+            "50": 0,
+            "52": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 0,
+            "60": 0,
+            "62": 1,
+            "64": 1,
+            "65": 1
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 383,
+              "EndOffset": 385,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 383,
+              "EndOffset": 396,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 422,
+              "EndOffset": 424,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 422,
+              "EndOffset": 452,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 610,
+              "EndOffset": 612,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 610,
+              "EndOffset": 698,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 39,
+              "Offset": 856,
+              "EndOffset": 858,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 856,
+              "EndOffset": 864,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 44,
+              "Offset": 940,
+              "EndOffset": 945,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 47,
+              "Offset": 1110,
+              "EndOffset": 1112,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 1110,
+              "EndOffset": 1198,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            },
+            {
+              "Line": 44,
+              "Offset": 940,
+              "EndOffset": 1206,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 54,
+              "Offset": 1221,
+              "EndOffset": 1226,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 1
+            },
+            {
+              "Line": 57,
+              "Offset": 1391,
+              "EndOffset": 1393,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 1391,
+              "EndOffset": 1479,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 1
+            },
+            {
+              "Line": 54,
+              "Offset": 1221,
+              "EndOffset": 1487,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Commands\\DeactivateEmployee\\DeactivateEmployeeCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "15": 0,
+            "16": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 351,
+              "EndOffset": 353,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 351,
+              "EndOffset": 364,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 568,
+              "EndOffset": 570,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 568,
+              "EndOffset": 656,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Commands\\ActivateEmployee\\ActivateEmployeeCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "14": 2,
+            "15": 2
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 10,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "22": 2,
+            "23": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1,
+            "30": 0,
+            "32": 0,
+            "35": 1,
+            "36": 1
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 351,
+              "EndOffset": 353,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 351,
+              "EndOffset": 364,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 29,
+              "Offset": 557,
+              "EndOffset": 559,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 557,
+              "EndOffset": 645,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Employees\\Commands\\ActivateEmployee\\EmployeeActivationCommands.cs": {
+      "BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommand": {
+        "System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommand::get_EmployeeId()": {
+          "Lines": {
+            "5": 4
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.DeactivateEmployeeCommand": {
+        "System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.DeactivateEmployeeCommand::get_EmployeeId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\VerifyTwoFactor\\VerifyTwoFactorCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommand": {
+        "System.Guid BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommand::get_UserId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\VerifyTwoFactor\\VerifyTwoFactorCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler/<Handle>d__4": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 202,
+              "EndOffset": 204,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 202,
+              "EndOffset": 220,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 225,
+              "EndOffset": 227,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 225,
+              "EndOffset": 238,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 256,
+              "EndOffset": 258,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 256,
+              "EndOffset": 269,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 287,
+              "EndOffset": 289,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 287,
+              "EndOffset": 300,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 468,
+              "EndOffset": 470,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 468,
+              "EndOffset": 481,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\TwoFactor\\DisableTwoFactorCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommand::get_CurrentPassword()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\TwoFactor\\DisableTwoFactorCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "44": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 64,
+              "EndOffset": 77,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 252,
+              "EndOffset": 254,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 252,
+              "EndOffset": 265,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 422,
+              "EndOffset": 424,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 422,
+              "EndOffset": 435,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 606,
+              "EndOffset": 608,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 606,
+              "EndOffset": 694,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\TwoFactor\\EnableTwoFactorCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommand::get_CurrentPassword()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\TwoFactor\\EnableTwoFactorCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "44": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 64,
+              "EndOffset": 77,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 252,
+              "EndOffset": 254,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 252,
+              "EndOffset": 265,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 422,
+              "EndOffset": 424,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 422,
+              "EndOffset": 435,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 606,
+              "EndOffset": 608,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 606,
+              "EndOffset": 694,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ResetPassword\\ResetPasswordCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommand::get_Email()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler": {
+        "System.Boolean BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "11": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "52": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 203,
+              "EndOffset": 205,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 203,
+              "EndOffset": 222,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 394,
+              "EndOffset": 396,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 394,
+              "EndOffset": 409,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 414,
+              "EndOffset": 419,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 577,
+              "EndOffset": 579,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 577,
+              "EndOffset": 595,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 414,
+              "EndOffset": 757,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 775,
+              "EndOffset": 777,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 775,
+              "EndOffset": 863,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ResendConfirmation\\ResendConfirmationEmailCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommand::get_Email()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ResendConfirmation\\ResendConfirmationEmailCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 194,
+              "EndOffset": 196,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 194,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 227,
+              "EndOffset": 229,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 227,
+              "EndOffset": 245,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 554,
+              "EndOffset": 556,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 554,
+              "EndOffset": 568,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\Login\\LoginCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommand::get_Email()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\Login\\LoginCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "26": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 47,
+              "EndOffset": 61,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler/<Handle>d__5": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler/<Handle>d__5::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 205,
+              "EndOffset": 207,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 205,
+              "EndOffset": 223,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 228,
+              "EndOffset": 230,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 228,
+              "EndOffset": 241,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 259,
+              "EndOffset": 261,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 259,
+              "EndOffset": 272,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 428,
+              "EndOffset": 430,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 428,
+              "EndOffset": 441,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 459,
+              "EndOffset": 464,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 459,
+              "EndOffset": 740,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 942,
+              "EndOffset": 944,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 942,
+              "EndOffset": 956,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\Login\\LoginResult.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult": {
+        "System.Boolean BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_RequiresTwoFactor()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Guid> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_UserId()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_AccessToken()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_ExpiresAt()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ForgotPassword\\ForgotPasswordCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommand::get_Email()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ForgotPassword\\ForgotPasswordCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 187,
+              "EndOffset": 189,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 187,
+              "EndOffset": 205,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 210,
+              "EndOffset": 212,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 210,
+              "EndOffset": 229,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 543,
+              "EndOffset": 545,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 543,
+              "EndOffset": 557,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\CreateEmployee\\CreateEmployeeCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Email()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Password()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_FirstName()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_LastName()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::.ctor(System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "6": 2
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult": {
+        "System.Guid BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Id()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Email()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_FullName()": {
+          "Lines": {
+            "16": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::.ctor(System.Guid,System.String,System.String)": {
+          "Lines": {
+            "13": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\CreateEmployee\\CreateEmployeeCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,Microsoft.AspNetCore.Identity.RoleManager`1<BankingSuite.IamService.Domain.Users.ApplicationRole>)": {
+          "Lines": {
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "61": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "39": 2,
+            "40": 2,
+            "41": 1,
+            "42": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "57": 1,
+            "59": 1,
+            "60": 0,
+            "62": 0,
+            "67": 1,
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "72": 1,
+            "74": 1,
+            "76": 1,
+            "77": 2
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 77,
+              "EndOffset": 79,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 28,
+              "Offset": 95,
+              "EndOffset": 97,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 28,
+              "Offset": 77,
+              "EndOffset": 115,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 95,
+              "EndOffset": 115,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 118,
+              "EndOffset": 120,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 118,
+              "EndOffset": 137,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 40,
+              "Offset": 292,
+              "EndOffset": 294,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 292,
+              "EndOffset": 311,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 59,
+              "Offset": 599,
+              "EndOffset": 601,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 599,
+              "EndOffset": 682,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 67,
+              "Offset": 815,
+              "EndOffset": 817,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 67,
+              "Offset": 815,
+              "EndOffset": 939,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            },
+            {
+              "Line": 74,
+              "Offset": 1084,
+              "EndOffset": 1086,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 1084,
+              "EndOffset": 1092,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ConfirmEmail\\ConfirmEmailCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommand": {
+        "System.Guid BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommand::get_UserId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ConfirmEmail\\ConfirmEmailCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler": {
+        "System.Boolean BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)": {
+          "Lines": {
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)": {
+          "Lines": {
+            "11": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<Handle>d__2": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 218,
+              "EndOffset": 220,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 218,
+              "EndOffset": 231,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 393,
+              "EndOffset": 395,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 393,
+              "EndOffset": 408,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 413,
+              "EndOffset": 418,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 591,
+              "EndOffset": 593,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 591,
+              "EndOffset": 604,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 413,
+              "EndOffset": 756,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 774,
+              "EndOffset": 776,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 774,
+              "EndOffset": 862,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ChangePassword\\ChangePasswordCommand.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommand": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommand::get_CurrentPassword()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Application\\Auth\\Commands\\ChangePassword\\ChangePasswordCommandHandler.cs": {
+      "BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "16": 2,
+            "17": 2,
+            "19": 2,
+            "20": 2
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 3,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<>c": {
+        "System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)": {
+          "Lines": {
+            "43": 2
+          },
+          "Branches": []
+        }
+      },
+      "BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<Handle>d__3": {
+        "System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "26": 2,
+            "27": 2,
+            "28": 0,
+            "30": 2,
+            "32": 2,
+            "33": 0,
+            "35": 2,
+            "36": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2,
+            "41": 2,
+            "42": 1,
+            "44": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 50,
+              "EndOffset": 63,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 238,
+              "EndOffset": 240,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 238,
+              "EndOffset": 251,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 41,
+              "Offset": 431,
+              "EndOffset": 433,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 431,
+              "EndOffset": 519,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "BankingSuite.IamService.Domain.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Domain\\Users\\ApplicationRole.cs": {
+      "BankingSuite.IamService.Domain.Users.ApplicationRole": {
+        "System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor()": {
+          "Lines": {
+            "7": 3,
+            "8": 3,
+            "9": 3
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor(System.String)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Domain\\Users\\ApplicationUser.cs": {
+      "BankingSuite.IamService.Domain.Users.ApplicationUser": {
+        "System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FirstName()": {
+          "Lines": {
+            "8": 27
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastName()": {
+          "Lines": {
+            "10": 26
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Domain.Users.ApplicationUser::get_IsActive()": {
+          "Lines": {
+            "12": 27
+          },
+          "Branches": []
+        },
+        "BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Domain.Users.ApplicationUser::get_UserType()": {
+          "Lines": {
+            "14": 16
+          },
+          "Branches": []
+        },
+        "System.DateTime BankingSuite.IamService.Domain.Users.ApplicationUser::get_CreatedAtUtc()": {
+          "Lines": {
+            "16": 15
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> BankingSuite.IamService.Domain.Users.ApplicationUser::get_DeactivatedAtUtc()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastLoginAt()": {
+          "Lines": {
+            "20": 1
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FullName()": {
+          "Lines": {
+            "23": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Domain\\Users\\RoleNames.cs": {
+      "BankingSuite.IamService.Domain.Users.RoleNames": {
+        "System.Void BankingSuite.IamService.Domain.Users.RoleNames::.cctor()": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BankingSuite.IamService.Infrastructure.dll": {
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\DependencyInjection.cs": {
+      "BankingSuite.IamService.Infrastructure.DependencyInjection": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Infrastructure.DependencyInjection::AddIamInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "26": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "104": 0,
+            "107": 0,
+            "108": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": [
+            {
+              "Line": 75,
+              "Offset": 139,
+              "EndOffset": 141,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 75,
+              "Offset": 139,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 21,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Security\\JwtOptions.cs": {
+      "BankingSuite.IamService.Infrastructure.Security.JwtOptions": {
+        "System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Issuer()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Audience()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Key()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_AccessTokenMinutes()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Security\\JwtTokenGenerator.cs": {
+      "BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator": {
+        "System.String BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::GenerateToken(BankingSuite.IamService.Domain.Users.ApplicationUser,System.Collections.Generic.IList`1<System.String>)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 57,
+              "EndOffset": 65,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 223,
+              "EndOffset": 186,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 223,
+              "EndOffset": 225,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::.ctor(Microsoft.Extensions.Options.IOptions`1<BankingSuite.IamService.Infrastructure.Security.JwtOptions>)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Persistence\\IamDbContext.cs": {
+      "BankingSuite.IamService.Infrastructure.Persistence.IamDbContext": {
+        "System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 2,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 2,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BankingSuite.IamService.Infrastructure.Persistence.IamDbContext>)": {
+          "Lines": {
+            "11": 12,
+            "12": 12,
+            "13": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Identity\\ApplicationUser.cs": {
+      "BankingSuite.IamService.Infrastructure.Identity.ApplicationUser": {
+        "System.String BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_DisplayName()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UserType()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_IsActive()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_CreatedAt()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UpdatedAt()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Email\\LoggingEmailSender.cs": {
+      "BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender": {
+        "System.Threading.Tasks.Task BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::SendEmailAsync(System.String,System.String,System.String,System.Threading.CancellationToken)": {
+          "Lines": {
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        },
+        "System.Void BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::.ctor(Microsoft.Extensions.Logging.ILogger`1<BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender>)": {
+          "Lines": {
+            "9": 1,
+            "11": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Projects\\Alvordev\\Books\\digital-banking-suite\\src\\backend\\Services\\IamService\\BankingSuite.IamService.Infrastructure\\Auth\\JwtOptions.cs": {
+      "BankingSuite.IamService.Infrastructure.Auth.JwtOptions": {
+        "System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Issuer()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Audience()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Key()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_AccessTokenLifetimeMinutes()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

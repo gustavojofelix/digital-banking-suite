@@ -9,7 +9,11 @@ public sealed class ActivateEmployeeEndpoint(IMediator mediator) : EndpointWitho
 {
     public override void Configure()
     {
-        Post("/api/iam/admin/employees/{id:guid}/activate");
+        Verbs(Http.POST);
+        Routes(
+            "/api/iam/admin/employees/{id:guid}/activate",
+            "/api/iam/admin/employee/{id:guid}/activate"
+        );
         Roles("IamAdmin", "SuperAdmin");
         // Group<IamAdminGroup>();
     }
@@ -28,7 +32,11 @@ public sealed class DeactivateEmployeeEndpoint(IMediator mediator) : EndpointWit
 {
     public override void Configure()
     {
-        Post("/api/iam/admin/employees/{id:guid}/deactivate");
+        Verbs(Http.POST);
+        Routes(
+            "/api/iam/admin/employees/{id:guid}/deactivate",
+            "/api/iam/admin/employee/{id:guid}/deactivate"
+        );
         Roles("IamAdmin", "SuperAdmin");
         // Group<IamAdminGroup>();
     }

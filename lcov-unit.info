@@ -1,0 +1,1622 @@
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Application\Models\PagedResult.cs
+FN:3,System.Collections.Generic.IReadOnlyList`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_Items()
+FNDA:3,System.Collections.Generic.IReadOnlyList`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_Items()
+DA:4,3
+FN:4,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageNumber()
+FNDA:1,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageNumber()
+DA:5,1
+FN:5,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageSize()
+FNDA:1,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_PageSize()
+DA:6,1
+FN:6,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalCount()
+FNDA:2,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalCount()
+DA:7,2
+FN:9,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalPages()
+FNDA:0,System.Int32 BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_TotalPages()
+DA:10,0
+FN:10,System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasNextPage()
+FNDA:0,System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasNextPage()
+DA:11,0
+FN:11,System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasPreviousPage()
+FNDA:0,System.Boolean BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::get_HasPreviousPage()
+DA:12,0
+FN:14,BankingSuite.BuildingBlocks.Application.Models.PagedResult`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::Empty(System.Int32,System.Int32)
+FNDA:0,BankingSuite.BuildingBlocks.Application.Models.PagedResult`1<T> BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::Empty(System.Int32,System.Int32)
+DA:15,0
+FN:2,System.Void BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::.ctor(System.Collections.Generic.IReadOnlyList`1<T>,System.Int32,System.Int32,System.Int32)
+FNDA:2,System.Void BankingSuite.BuildingBlocks.Application.Models.PagedResult`1::.ctor(System.Collections.Generic.IReadOnlyList`1<T>,System.Int32,System.Int32,System.Int32)
+DA:3,2
+DA:8,2
+LF:10
+LH:6
+BRF:0
+BRH:0
+FNF:9
+FNH:5
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\Abstractions\Entity.cs
+FN:4,TId BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::get_Id()
+FNDA:20,TId BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::get_Id()
+DA:5,20
+FN:14,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::Equals(System.Object)
+FNDA:4,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::Equals(System.Object)
+DA:15,4
+DA:16,4
+DA:17,0
+DA:19,4
+DA:20,0
+DA:22,4
+DA:23,2
+DA:25,2
+DA:26,4
+BRDA:16,17,0,0
+BRDA:16,17,1,4
+BRDA:19,29,0,0
+BRDA:19,29,1,4
+BRDA:22,66,0,2
+BRDA:22,66,1,2
+BRDA:22,106,0,2
+BRDA:22,106,1,2
+FN:28,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Equality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)
+FNDA:2,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Equality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)
+DA:29,2
+DA:30,2
+DA:31,2
+DA:32,2
+DA:33,2
+BRDA:30,2,0,0
+BRDA:30,2,1,2
+BRDA:30,13,0,0
+BRDA:30,13,1,2
+BRDA:31,20,0,2
+BRDA:31,20,1,0
+BRDA:31,31,0,0
+BRDA:31,31,1,2
+FN:34,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Inequality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)
+FNDA:1,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::op_Inequality(BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>,BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1<TId>)
+DA:35,1
+FN:36,System.Int32 BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::GetHashCode()
+FNDA:2,System.Int32 BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::GetHashCode()
+DA:37,2
+BRDA:37,20,0,0
+BRDA:37,20,1,2
+FN:6,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor(TId)
+FNDA:4,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor(TId)
+DA:7,4
+DA:8,4
+DA:9,4
+DA:10,4
+FN:11,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor()
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Entity`1::.ctor()
+DA:12,0
+LF:22
+LH:19
+BRF:18
+BRH:11
+FNF:7
+FNH:6
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\Abstractions\Result.cs
+FN:4,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsSuccess()
+FNDA:8,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsSuccess()
+DA:5,8
+FN:5,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsFailure()
+FNDA:2,System.Boolean BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_IsFailure()
+DA:6,2
+FN:6,System.String BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_Error()
+FNDA:5,System.String BankingSuite.BuildingBlocks.Domain.Abstractions.Result::get_Error()
+DA:7,5
+FN:14,BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success()
+FNDA:1,BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success()
+DA:15,1
+FN:17,BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)
+FNDA:1,BankingSuite.BuildingBlocks.Domain.Abstractions.Result BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)
+DA:18,1
+FN:19,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success(T)
+FNDA:2,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Success(T)
+DA:20,2
+FN:21,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)
+FNDA:2,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result::Failure(System.String)
+DA:22,2
+FN:8,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result::.ctor(System.Boolean,System.String)
+FNDA:6,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result::.ctor(System.Boolean,System.String)
+DA:9,6
+DA:10,6
+DA:11,6
+DA:12,6
+DA:13,6
+FN:26,T BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::get_Value()
+FNDA:2,T BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::get_Value()
+DA:27,2
+FN:35,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Success(T)
+FNDA:2,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Success(T)
+DA:36,2
+FN:38,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Failure(System.String)
+FNDA:2,BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1<T> BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::Failure(System.String)
+DA:39,2
+FN:29,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::.ctor(System.Boolean,T,System.String)
+FNDA:4,System.Void BankingSuite.BuildingBlocks.Domain.Abstractions.Result`1::.ctor(System.Boolean,T,System.String)
+DA:30,4
+DA:31,4
+DA:32,4
+DA:33,4
+LF:19
+LH:19
+BRF:0
+BRH:0
+FNF:12
+FNH:12
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\Abstractions\AggregateRoot.cs
+FN:9,System.Collections.Generic.IReadOnlyCollection`1<BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent> BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::get_DomainEvents()
+FNDA:0,System.Collections.Generic.IReadOnlyCollection`1<BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent> BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::get_DomainEvents()
+DA:10,0
+FN:11,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::AddDomainEvent(BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent)
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::AddDomainEvent(BankingSuite.BuildingBlocks.Domain.Events.IDomainEvent)
+DA:12,0
+FN:13,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::ClearDomainEvents()
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::ClearDomainEvents()
+DA:14,0
+FN:7,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::.ctor()
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Domain.Entities.AggregateRoot`1::.ctor()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Infrastructure\Persistence\RepositoryBase.cs
+FN:18,System.Threading.Tasks.Task`1<TAggregate> BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.Task`1<TAggregate> BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+DA:19,0
+FN:21,System.Threading.Tasks.Task BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::AddAsync(TAggregate,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.Task BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::AddAsync(TAggregate,System.Threading.CancellationToken)
+DA:22,0
+FN:23,System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::Remove(TAggregate)
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::Remove(TAggregate)
+DA:24,0
+FN:11,System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)
+FNDA:0,System.Void BankingSuite.BuildingBlocks.Infrastructure.Persistence.RepositoryBase`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\DependencyInjection.cs
+FN:9,Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Application.DependencyInjection::AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Application.DependencyInjection::AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:15,0
+DA:16,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Queries\ListEmployees\ListEmployeesQuery.cs
+FN:7,System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageNumber()
+FNDA:4,System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageNumber()
+DA:8,4
+FN:8,System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageSize()
+FNDA:6,System.Int32 BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_PageSize()
+DA:9,6
+FN:9,System.String BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_Search()
+FNDA:3,System.String BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_Search()
+DA:10,3
+FN:10,System.Boolean BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_IncludeInactive()
+FNDA:2,System.Boolean BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::get_IncludeInactive()
+DA:11,2
+FN:6,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::.ctor(System.Int32,System.Int32,System.String,System.Boolean)
+FNDA:2,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQuery::.ctor(System.Int32,System.Int32,System.String,System.Boolean)
+DA:7,2
+DA:12,2
+LF:6
+LH:6
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Queries\ListEmployees\ListEmployeesQueryHandler.cs
+FN:16,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:2,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:17,2
+DA:18,2
+BRDA:18,10,0,0
+BRDA:18,10,1,2
+FN:23,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler/<Handle>d__2::MoveNext()
+FNDA:2,System.Void BankingSuite.IamService.Application.Employees.Queries.ListEmployees.ListEmployeesQueryHandler/<Handle>d__2::MoveNext()
+DA:24,2
+DA:25,2
+DA:27,2
+DA:28,1
+DA:29,1
+DA:30,1
+DA:32,2
+DA:33,1
+DA:34,1
+DA:38,1
+DA:39,1
+DA:40,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:46,2
+DA:48,2
+DA:49,2
+DA:50,2
+DA:51,2
+DA:52,2
+DA:54,2
+DA:56,10
+DA:57,2
+DA:58,2
+DA:60,2
+DA:61,2
+DA:62,2
+DA:63,2
+DA:64,2
+DA:65,2
+DA:66,2
+DA:67,2
+DA:68,2
+DA:69,2
+DA:70,2
+DA:71,2
+DA:72,2
+DA:74,2
+DA:75,2
+DA:76,2
+DA:77,2
+DA:78,2
+DA:79,2
+DA:80,2
+BRDA:27,86,0,1
+BRDA:27,86,1,2
+BRDA:32,187,0,1
+BRDA:32,187,1,2
+BRDA:56,1676,1,2
+BRDA:56,1676,0,2
+LF:48
+LH:48
+BRF:8
+BRH:7
+FNF:2
+FNH:2
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Queries\GetEmployeeDetails\GetEmployeeDetailsQuery.cs
+FN:5,System.Guid BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQuery::get_EmployeeId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQuery::get_EmployeeId()
+DA:6,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Queries\GetEmployeeDetails\GetEmployeeDetailsQueryHandler.cs
+FN:15,System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:16,0
+DA:17,0
+BRDA:17,10,0,0
+BRDA:17,10,1,0
+FN:21,System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Queries.GetEmployeeDetails.GetEmployeeDetailsQueryHandler/<Handle>d__2::MoveNext()
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+BRDA:27,356,0,0
+BRDA:27,356,1,0
+LF:23
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Dtos\EmployeeDto.cs
+FN:4,System.Guid BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Id()
+FNDA:2,System.Guid BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Id()
+DA:5,2
+FN:5,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Email()
+FNDA:5,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Email()
+DA:6,5
+FN:6,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_FullName()
+FNDA:2,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_FullName()
+DA:7,2
+FN:7,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_EmailConfirmed()
+FNDA:2,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_EmailConfirmed()
+DA:8,2
+FN:8,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_IsActive()
+FNDA:2,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_IsActive()
+DA:9,2
+FN:9,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_TwoFactorEnabled()
+FNDA:2,System.Boolean BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_TwoFactorEnabled()
+DA:10,2
+FN:10,System.String[] BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Roles()
+FNDA:4,System.String[] BankingSuite.IamService.Application.Employees.Dtos.EmployeeSummaryDto::get_Roles()
+DA:11,4
+FN:15,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_PhoneNumber()
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_PhoneNumber()
+DA:16,0
+FN:16,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LockoutEnd()
+FNDA:0,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LockoutEnd()
+DA:17,0
+FN:17,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LastLoginAt()
+FNDA:0,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Application.Employees.Dtos.EmployeeDetailsDto::get_LastLoginAt()
+DA:18,0
+LF:10
+LH:7
+BRF:0
+BRH:0
+FNF:10
+FNH:7
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Commands\UpdateEmployee\UpdateEmployeeCommand.cs
+FN:5,System.Guid BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_EmployeeId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_EmployeeId()
+DA:6,0
+FN:6,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_FullName()
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_FullName()
+DA:7,0
+FN:7,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_PhoneNumber()
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_PhoneNumber()
+DA:8,0
+FN:8,System.String[] BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_Roles()
+FNDA:0,System.String[] BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::get_Roles()
+DA:9,0
+FN:4,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::.ctor(System.Guid,System.String,System.String,System.String[])
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommand::.ctor(System.Guid,System.String,System.String,System.String[])
+DA:5,0
+DA:10,0
+LF:6
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Commands\UpdateEmployee\UpdateEmployeeCommandHandler.cs
+FN:13,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:14,0
+DA:15,0
+BRDA:15,10,0,0
+BRDA:15,10,1,0
+FN:33,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+DA:34,0
+FN:48,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_2(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_2(Microsoft.AspNetCore.Identity.IdentityError)
+DA:49,0
+FN:58,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_3(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<>c::<Handle>b__2_3(Microsoft.AspNetCore.Identity.IdentityError)
+DA:59,0
+FN:17,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.UpdateEmployee.UpdateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:52,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:60,0
+DA:62,0
+DA:64,0
+DA:65,0
+BRDA:22,383,0,0
+BRDA:22,383,1,0
+BRDA:28,422,0,0
+BRDA:28,422,1,0
+BRDA:32,610,0,0
+BRDA:32,610,1,0
+BRDA:39,856,0,0
+BRDA:39,856,1,0
+BRDA:44,940,0,0
+BRDA:47,1110,0,0
+BRDA:47,1110,1,0
+BRDA:44,940,1,0
+BRDA:54,1221,0,0
+BRDA:57,1391,0,0
+BRDA:57,1391,1,0
+BRDA:54,1221,1,0
+LF:36
+LH:0
+BRF:18
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Commands\DeactivateEmployee\DeactivateEmployeeCommandHandler.cs
+FN:14,System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:15,0
+DA:16,0
+BRDA:16,10,0,0
+BRDA:16,10,1,0
+FN:31,System.String BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+DA:32,0
+FN:18,System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.DeactivateEmployee.DeactivateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+DA:19,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:36,0
+DA:37,0
+BRDA:23,351,0,0
+BRDA:23,351,1,0
+BRDA:30,568,0,0
+BRDA:30,568,1,0
+LF:16
+LH:0
+BRF:6
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Commands\ActivateEmployee\ActivateEmployeeCommandHandler.cs
+FN:13,System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:14,0
+DA:15,0
+BRDA:15,10,0,0
+BRDA:15,10,1,0
+FN:30,System.String BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<>c::<Handle>b__2_1(Microsoft.AspNetCore.Identity.IdentityError)
+DA:31,0
+FN:17,System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommandHandler/<Handle>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:26,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:35,0
+DA:36,0
+BRDA:22,351,0,0
+BRDA:22,351,1,0
+BRDA:29,557,0,0
+BRDA:29,557,1,0
+LF:16
+LH:0
+BRF:6
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Employees\Commands\ActivateEmployee\EmployeeActivationCommands.cs
+FN:4,System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommand::get_EmployeeId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.ActivateEmployeeCommand::get_EmployeeId()
+DA:5,0
+FN:6,System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.DeactivateEmployeeCommand::get_EmployeeId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Employees.Commands.ActivateEmployee.DeactivateEmployeeCommand::get_EmployeeId()
+DA:7,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\VerifyTwoFactor\VerifyTwoFactorCommand.cs
+FN:8,System.Guid BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommand::get_UserId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommand::get_UserId()
+DA:9,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\VerifyTwoFactor\VerifyTwoFactorCommandHandler.cs
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+DA:22,0
+BRDA:16,3,0,0
+BRDA:16,3,1,0
+BRDA:19,25,0,0
+BRDA:19,25,1,0
+FN:27,System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler/<Handle>d__4::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.VerifyTwoFactor.VerifyTwoFactorCommandHandler/<Handle>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:54,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+BRDA:31,202,0,0
+BRDA:31,202,1,0
+BRDA:31,225,0,0
+BRDA:31,225,1,0
+BRDA:34,256,0,0
+BRDA:34,256,1,0
+BRDA:39,287,0,0
+BRDA:39,287,1,0
+BRDA:48,468,0,0
+BRDA:48,468,1,0
+LF:37
+LH:0
+BRF:14
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\TwoFactor\DisableTwoFactorCommand.cs
+FN:8,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommand::get_CurrentPassword()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommand::get_CurrentPassword()
+DA:9,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\TwoFactor\DisableTwoFactorCommandHandler.cs
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+BRDA:16,3,0,0
+BRDA:16,3,1,0
+BRDA:19,25,0,0
+BRDA:19,25,1,0
+FN:43,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:44,0
+FN:25,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.DisableTwoFactorCommandHandler/<Handle>d__3::MoveNext()
+DA:26,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:48,0
+DA:49,0
+BRDA:27,64,0,0
+BRDA:27,64,1,0
+BRDA:32,252,0,0
+BRDA:32,252,1,0
+BRDA:36,422,0,0
+BRDA:36,422,1,0
+BRDA:42,606,0,0
+BRDA:42,606,1,0
+LF:25
+LH:0
+BRF:12
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\TwoFactor\EnableTwoFactorCommand.cs
+FN:6,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommand::get_CurrentPassword()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommand::get_CurrentPassword()
+DA:7,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\TwoFactor\EnableTwoFactorCommandHandler.cs
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+BRDA:16,3,0,0
+BRDA:16,3,1,0
+BRDA:19,25,0,0
+BRDA:19,25,1,0
+FN:43,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:44,0
+FN:25,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.TwoFactor.EnableTwoFactorCommandHandler/<Handle>d__3::MoveNext()
+DA:26,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:48,0
+DA:49,0
+BRDA:27,64,0,0
+BRDA:27,64,1,0
+BRDA:32,252,0,0
+BRDA:32,252,1,0
+BRDA:36,422,0,0
+BRDA:36,422,1,0
+BRDA:42,606,0,0
+BRDA:42,606,1,0
+LF:25
+LH:0
+BRF:12
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ResetPassword\ResetPasswordCommand.cs
+FN:7,System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommand::get_Email()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommand::get_Email()
+DA:8,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ResetPassword\ResetPasswordCommandHandler.cs
+FN:59,System.Boolean BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)
+FNDA:0,System.Boolean BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)
+DA:60,0
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:11,0
+DA:14,0
+DA:15,0
+BRDA:14,3,0,0
+BRDA:14,3,1,0
+FN:51,System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:52,0
+FN:20,System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ResetPassword.ResetPasswordCommandHandler/<Handle>d__2::MoveNext()
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+DA:53,0
+DA:56,0
+DA:57,0
+BRDA:24,203,0,0
+BRDA:24,203,1,0
+BRDA:36,394,0,0
+BRDA:36,394,1,0
+BRDA:36,414,0,0
+BRDA:40,577,0,0
+BRDA:40,577,1,0
+BRDA:36,414,1,0
+BRDA:50,775,0,0
+BRDA:50,775,1,0
+LF:31
+LH:0
+BRF:12
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ResendConfirmation\ResendConfirmationEmailCommand.cs
+FN:4,System.String BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommand::get_Email()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommand::get_Email()
+DA:5,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ResendConfirmation\ResendConfirmationEmailCommandHandler.cs
+FN:8,System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:18,0
+BRDA:14,3,0,0
+BRDA:14,3,1,0
+BRDA:17,25,0,0
+BRDA:17,25,1,0
+FN:23,System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ResendConfirmation.ResendConfirmationEmailCommandHandler/<Handle>d__3::MoveNext()
+DA:24,0
+DA:25,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:48,0
+DA:50,0
+DA:51,0
+BRDA:28,194,0,0
+BRDA:28,194,1,0
+BRDA:31,227,0,0
+BRDA:31,227,1,0
+BRDA:41,554,0,0
+BRDA:41,554,1,0
+LF:28
+LH:0
+BRF:10
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\Login\LoginCommand.cs
+FN:5,System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommand::get_Email()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommand::get_Email()
+DA:6,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\Login\LoginCommandHandler.cs
+FN:9,System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Auth.IJwtTokenGenerator,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:26,0
+BRDA:16,3,0,0
+BRDA:16,3,1,0
+BRDA:19,25,0,0
+BRDA:19,25,1,0
+BRDA:22,47,0,0
+BRDA:22,47,1,0
+FN:28,System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler/<Handle>d__5::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.Login.LoginCommandHandler/<Handle>d__5::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:61,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:71,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+BRDA:32,205,0,0
+BRDA:32,205,1,0
+BRDA:32,228,0,0
+BRDA:32,228,1,0
+BRDA:35,259,0,0
+BRDA:35,259,1,0
+BRDA:39,428,0,0
+BRDA:39,428,1,0
+BRDA:43,459,0,0
+BRDA:43,459,1,0
+BRDA:64,942,0,0
+BRDA:64,942,1,0
+LF:49
+LH:0
+BRF:18
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\Login\LoginResult.cs
+FN:11,System.Boolean BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_RequiresTwoFactor()
+FNDA:0,System.Boolean BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_RequiresTwoFactor()
+DA:12,0
+FN:14,System.Nullable`1<System.Guid> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_UserId()
+FNDA:0,System.Nullable`1<System.Guid> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_UserId()
+DA:15,0
+FN:17,System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_AccessToken()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_AccessToken()
+DA:18,0
+FN:19,System.Nullable`1<System.DateTime> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_ExpiresAt()
+FNDA:0,System.Nullable`1<System.DateTime> BankingSuite.IamService.Application.Auth.Commands.Login.LoginResult::get_ExpiresAt()
+DA:20,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ForgotPassword\ForgotPasswordCommand.cs
+FN:7,System.String BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommand::get_Email()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommand::get_Email()
+DA:8,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ForgotPassword\ForgotPasswordCommandHandler.cs
+FN:11,System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.IEmailSender)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:18,0
+DA:20,0
+DA:21,0
+BRDA:17,3,0,0
+BRDA:17,3,1,0
+BRDA:20,25,0,0
+BRDA:20,25,1,0
+FN:26,System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ForgotPassword.ForgotPasswordCommandHandler/<Handle>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:53,0
+DA:54,0
+BRDA:30,187,0,0
+BRDA:30,187,1,0
+BRDA:30,210,0,0
+BRDA:30,210,1,0
+BRDA:43,543,0,0
+BRDA:43,543,1,0
+LF:28
+LH:0
+BRF:10
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\CreateEmployee\CreateEmployeeCommand.cs
+FN:6,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Email()
+FNDA:7,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Email()
+DA:7,7
+FN:7,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Password()
+FNDA:3,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_Password()
+DA:8,3
+FN:8,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_FirstName()
+FNDA:3,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_FirstName()
+DA:9,3
+FN:9,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_LastName()
+FNDA:3,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::get_LastName()
+DA:10,3
+FN:5,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::.ctor(System.String,System.String,System.String,System.String)
+FNDA:2,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommand::.ctor(System.String,System.String,System.String,System.String)
+DA:6,2
+FN:13,System.Guid BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Id()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Id()
+DA:14,0
+FN:14,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Email()
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_Email()
+DA:15,0
+FN:15,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_FullName()
+FNDA:1,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::get_FullName()
+DA:16,1
+FN:12,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::.ctor(System.Guid,System.String,System.String)
+FNDA:1,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeResult::.ctor(System.Guid,System.String,System.String)
+DA:13,1
+LF:9
+LH:7
+BRF:0
+BRH:0
+FNF:9
+FNH:7
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\CreateEmployee\CreateEmployeeCommandHandler.cs
+FN:13,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,Microsoft.AspNetCore.Identity.RoleManager`1<BankingSuite.IamService.Domain.Users.ApplicationRole>)
+FNDA:2,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,Microsoft.AspNetCore.Identity.RoleManager`1<BankingSuite.IamService.Domain.Users.ApplicationRole>)
+DA:14,2
+DA:15,2
+DA:16,2
+DA:17,2
+DA:18,2
+DA:19,2
+DA:20,2
+DA:21,2
+FN:60,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:61,0
+FN:26,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<Handle>d__3::MoveNext()
+FNDA:2,System.Void BankingSuite.IamService.Application.Auth.Commands.CreateEmployee.CreateEmployeeCommandHandler/<Handle>d__3::MoveNext()
+DA:27,2
+DA:28,2
+DA:29,2
+DA:30,2
+DA:31,2
+DA:32,2
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:39,2
+DA:40,2
+DA:41,1
+DA:42,1
+DA:45,1
+DA:46,1
+DA:47,1
+DA:48,1
+DA:49,1
+DA:50,1
+DA:51,1
+DA:52,1
+DA:53,1
+DA:54,1
+DA:55,1
+DA:57,1
+DA:59,1
+DA:60,0
+DA:62,0
+DA:67,1
+DA:68,1
+DA:69,1
+DA:70,1
+DA:72,1
+DA:74,1
+DA:76,1
+DA:77,2
+BRDA:28,77,0,2
+BRDA:28,95,0,2
+BRDA:28,77,1,0
+BRDA:28,95,1,0
+BRDA:28,118,0,0
+BRDA:28,118,1,2
+BRDA:40,292,0,1
+BRDA:40,292,1,1
+BRDA:59,599,0,0
+BRDA:59,599,1,1
+BRDA:67,815,0,1
+BRDA:67,815,1,1
+BRDA:74,1084,0,0
+BRDA:74,1084,1,1
+LF:46
+LH:39
+BRF:14
+BRH:9
+FNF:3
+FNH:2
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ConfirmEmail\ConfirmEmailCommand.cs
+FN:7,System.Guid BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommand::get_UserId()
+FNDA:0,System.Guid BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommand::get_UserId()
+DA:8,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ConfirmEmail\ConfirmEmailCommandHandler.cs
+FN:45,System.Boolean BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)
+FNDA:0,System.Boolean BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::HasConcurrencyError(Microsoft.AspNetCore.Identity.IdentityResult)
+DA:46,0
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>)
+DA:11,0
+DA:14,0
+DA:15,0
+BRDA:14,3,0,0
+BRDA:14,3,1,0
+FN:37,System.String BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:0,System.String BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<>c::<Handle>b__2_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:38,0
+FN:17,System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BankingSuite.IamService.Application.Auth.Commands.ConfirmEmail.ConfirmEmailCommandHandler/<Handle>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:42,0
+DA:43,0
+BRDA:21,218,0,0
+BRDA:21,218,1,0
+BRDA:26,393,0,0
+BRDA:26,393,1,0
+BRDA:26,413,0,0
+BRDA:30,591,0,0
+BRDA:30,591,1,0
+BRDA:26,413,1,0
+BRDA:36,774,0,0
+BRDA:36,774,1,0
+LF:22
+LH:0
+BRF:12
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ChangePassword\ChangePasswordCommand.cs
+FN:7,System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommand::get_CurrentPassword()
+FNDA:6,System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommand::get_CurrentPassword()
+DA:8,6
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Application\Auth\Commands\ChangePassword\ChangePasswordCommandHandler.cs
+FN:10,System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+FNDA:2,System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<BankingSuite.IamService.Domain.Users.ApplicationUser>,BankingSuite.IamService.Application.Common.Interfaces.ICurrentUser)
+DA:11,2
+DA:12,2
+DA:13,2
+DA:14,2
+DA:16,2
+DA:17,2
+DA:19,2
+DA:20,2
+BRDA:16,3,0,0
+BRDA:16,3,1,2
+BRDA:19,25,0,0
+BRDA:19,25,1,2
+FN:42,System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+FNDA:2,System.String BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<>c::<Handle>b__3_0(Microsoft.AspNetCore.Identity.IdentityError)
+DA:43,2
+FN:25,System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<Handle>d__3::MoveNext()
+FNDA:2,System.Void BankingSuite.IamService.Application.Auth.Commands.ChangePassword.ChangePasswordCommandHandler/<Handle>d__3::MoveNext()
+DA:26,2
+DA:27,2
+DA:28,0
+DA:30,2
+DA:32,2
+DA:33,0
+DA:35,2
+DA:36,2
+DA:37,2
+DA:38,2
+DA:39,2
+DA:41,2
+DA:42,1
+DA:44,1
+DA:47,1
+DA:48,1
+BRDA:27,50,0,0
+BRDA:27,50,1,2
+BRDA:32,238,0,0
+BRDA:32,238,1,2
+BRDA:41,431,0,1
+BRDA:41,431,1,1
+LF:25
+LH:23
+BRF:10
+BRH:6
+FNF:3
+FNH:3
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Domain\Users\ApplicationRole.cs
+FN:6,System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor()
+FNDA:0,System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor()
+DA:7,0
+DA:8,0
+DA:9,0
+FN:10,System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor(System.String)
+FNDA:1,System.Void BankingSuite.IamService.Domain.Users.ApplicationRole::.ctor(System.String)
+DA:11,1
+DA:12,1
+DA:13,1
+LF:6
+LH:3
+BRF:0
+BRH:0
+FNF:2
+FNH:1
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Domain\Users\ApplicationUser.cs
+FN:7,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FirstName()
+FNDA:21,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FirstName()
+DA:8,21
+FN:9,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastName()
+FNDA:20,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastName()
+DA:10,20
+FN:11,System.Boolean BankingSuite.IamService.Domain.Users.ApplicationUser::get_IsActive()
+FNDA:19,System.Boolean BankingSuite.IamService.Domain.Users.ApplicationUser::get_IsActive()
+DA:12,19
+FN:13,BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Domain.Users.ApplicationUser::get_UserType()
+FNDA:12,BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Domain.Users.ApplicationUser::get_UserType()
+DA:14,12
+FN:15,System.DateTime BankingSuite.IamService.Domain.Users.ApplicationUser::get_CreatedAtUtc()
+FNDA:11,System.DateTime BankingSuite.IamService.Domain.Users.ApplicationUser::get_CreatedAtUtc()
+DA:16,11
+FN:17,System.Nullable`1<System.DateTime> BankingSuite.IamService.Domain.Users.ApplicationUser::get_DeactivatedAtUtc()
+FNDA:0,System.Nullable`1<System.DateTime> BankingSuite.IamService.Domain.Users.ApplicationUser::get_DeactivatedAtUtc()
+DA:18,0
+FN:19,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastLoginAt()
+FNDA:0,System.Nullable`1<System.DateTimeOffset> BankingSuite.IamService.Domain.Users.ApplicationUser::get_LastLoginAt()
+DA:20,0
+FN:22,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FullName()
+FNDA:3,System.String BankingSuite.IamService.Domain.Users.ApplicationUser::get_FullName()
+DA:23,3
+LF:8
+LH:6
+BRF:0
+BRH:0
+FNF:8
+FNH:6
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Domain\Users\RoleNames.cs
+FN:11,System.Void BankingSuite.IamService.Domain.Users.RoleNames::.cctor()
+FNDA:0,System.Void BankingSuite.IamService.Domain.Users.RoleNames::.cctor()
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\DependencyInjection.cs
+FN:25,Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Infrastructure.DependencyInjection::AddIamInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection BankingSuite.IamService.Infrastructure.DependencyInjection::AddIamInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+DA:26,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:73,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:104,0
+DA:107,0
+DA:108,0
+DA:111,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:118,0
+DA:119,0
+BRDA:75,139,0,0
+BRDA:75,139,1,0
+BRDA:35,21,0,0
+BRDA:35,21,1,0
+LF:77
+LH:0
+BRF:4
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Security\JwtOptions.cs
+FN:6,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Issuer()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Issuer()
+DA:7,0
+FN:8,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Audience()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Audience()
+DA:9,0
+FN:10,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Key()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_Key()
+DA:11,0
+FN:12,System.Int32 BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_AccessTokenMinutes()
+FNDA:0,System.Int32 BankingSuite.IamService.Infrastructure.Security.JwtOptions::get_AccessTokenMinutes()
+DA:13,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Security\JwtTokenGenerator.cs
+FN:20,System.String BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::GenerateToken(BankingSuite.IamService.Domain.Users.ApplicationUser,System.Collections.Generic.IList`1<System.String>)
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::GenerateToken(BankingSuite.IamService.Domain.Users.ApplicationUser,System.Collections.Generic.IList`1<System.String>)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+BRDA:22,57,0,0
+BRDA:22,57,1,0
+BRDA:31,223,1,0
+BRDA:31,223,0,0
+FN:14,System.Void BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::.ctor(Microsoft.Extensions.Options.IOptions`1<BankingSuite.IamService.Infrastructure.Security.JwtOptions>)
+FNDA:0,System.Void BankingSuite.IamService.Infrastructure.Security.JwtTokenGenerator::.ctor(Microsoft.Extensions.Options.IOptions`1<BankingSuite.IamService.Infrastructure.Security.JwtOptions>)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+LF:29
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Persistence\IamDbContext.cs
+FN:15,System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:1,System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:16,1
+DA:17,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,2
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,2
+DA:29,1
+DA:30,1
+DA:31,1
+DA:32,1
+DA:33,1
+DA:34,1
+FN:10,System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BankingSuite.IamService.Infrastructure.Persistence.IamDbContext>)
+FNDA:6,System.Void BankingSuite.IamService.Infrastructure.Persistence.IamDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BankingSuite.IamService.Infrastructure.Persistence.IamDbContext>)
+DA:11,6
+DA:12,6
+DA:13,6
+LF:19
+LH:19
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Identity\ApplicationUser.cs
+FN:7,System.String BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_DisplayName()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_DisplayName()
+DA:8,0
+FN:8,BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UserType()
+FNDA:0,BankingSuite.IamService.Domain.Users.UserType BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UserType()
+DA:9,0
+FN:9,System.Boolean BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_IsActive()
+FNDA:0,System.Boolean BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_IsActive()
+DA:10,0
+FN:10,System.DateTime BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_CreatedAt()
+FNDA:0,System.DateTime BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_CreatedAt()
+DA:11,0
+FN:11,System.Nullable`1<System.DateTime> BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UpdatedAt()
+FNDA:0,System.Nullable`1<System.DateTime> BankingSuite.IamService.Infrastructure.Identity.ApplicationUser::get_UpdatedAt()
+DA:12,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Email\LoggingEmailSender.cs
+FN:18,System.Threading.Tasks.Task BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::SendEmailAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.Task BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::SendEmailAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:28,0
+DA:29,0
+FN:8,System.Void BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::.ctor(Microsoft.Extensions.Logging.ILogger`1<BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender>)
+FNDA:0,System.Void BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender::.ctor(Microsoft.Extensions.Logging.ILogger`1<BankingSuite.IamService.Infrastructure.Email.LoggingEmailSender>)
+DA:9,0
+DA:11,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:C:\Projects\Alvordev\Books\digital-banking-suite\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\Auth\JwtOptions.cs
+FN:4,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Issuer()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Issuer()
+DA:5,0
+FN:5,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Audience()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Audience()
+DA:6,0
+FN:6,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Key()
+FNDA:0,System.String BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_Key()
+DA:7,0
+FN:7,System.Int32 BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_AccessTokenLifetimeMinutes()
+FNDA:0,System.Int32 BankingSuite.IamService.Infrastructure.Auth.JwtOptions::get_AccessTokenLifetimeMinutes()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record

@@ -1,4 +1,5 @@
-﻿using BankingSuite.IamService.Application.Auth.Commands.Login;
+using System.Net;
+using BankingSuite.IamService.Application.Auth.Commands.Login;
 using FastEndpoints;
 using MediatR;
 
@@ -11,14 +12,7 @@ public class LoginRequest
     public string Password { get; set; } = string.Empty;
 }
 
-public class LoginResponse
-{
-    public string AccessToken { get; set; } = string.Empty;
-
-    public DateTime? ExpiresAtUtc { get; set; }
-}
-
-public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
+public class LoginEndpoint : Endpoint<LoginRequest, LoginResult>
 {
     private readonly IMediator _mediator;
 
@@ -29,7 +23,8 @@ public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
 
     public override void Configure()
     {
-        Post("/auth/login");
+        Verbs(Http.POST);
+        Routes("/api/iam/auth/login", "/auth/login");
         AllowAnonymous();
 
         Summary(s =>
@@ -41,20 +36,20 @@ public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
 
     public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
     {
-        var result = await _mediator.Send(
-            new LoginCommand(req.Email, req.Password),
-            ct);
-
-        if (result is null)
+        try
         {
-            await Send.ErrorsAsync(cancellation: ct);
-            return;
+            var result = await _mediator.Send(
+                new LoginCommand(req.Email, req.Password),
+                ct);
+
+            await Send.OkAsync(result, cancellation: ct);
         }
-
-        await Send.OkAsync(new LoginResponse
+        catch (InvalidOperationException ex)
         {
-            AccessToken = result.AccessToken!,
-            ExpiresAtUtc = result.ExpiresAt
-        }, cancellation: ct);
+            HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            await HttpContext.Response.WriteAsJsonAsync(
+                new { Errors = new[] { ex.Message } },
+                cancellationToken: ct);
+        }
     }
 }

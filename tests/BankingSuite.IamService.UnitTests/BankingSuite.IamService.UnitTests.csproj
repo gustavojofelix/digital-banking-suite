@@ -24,8 +24,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Domain\BankingSuite.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\..\src\backend\BuildingBlocks\BankingSuite.BuildingBlocks.Infrastructure\BankingSuite.BuildingBlocks.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\backend\Services\IamService\BankingSuite.IamService.Application\BankingSuite.IamService.Application.csproj" />
     <ProjectReference Include="..\..\src\backend\Services\IamService\BankingSuite.IamService.Domain\BankingSuite.IamService.Domain.csproj" />
+    <ProjectReference Include="..\..\src\backend\Services\IamService\BankingSuite.IamService.Infrastructure\BankingSuite.IamService.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

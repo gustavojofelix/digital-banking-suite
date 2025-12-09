@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BankingSuite.IamService.Domain.Users;
 using MediatR;
@@ -22,6 +23,16 @@ public sealed class ConfirmEmailCommandHandler(UserManager<ApplicationUser> user
 
         var result = await _userManager.ConfirmEmailAsync(user, request.Token);
 
+        if (!result.Succeeded && HasConcurrencyError(result))
+        {
+            // Reload a fresh user instance and retry once to avoid stale concurrency tokens.
+            user = await _userManager.FindByIdAsync(request.UserId.ToString());
+            if (user is null)
+                throw new KeyNotFoundException("User not found.");
+
+            result = await _userManager.ConfirmEmailAsync(user, request.Token);
+        }
+
         if (!result.Succeeded)
         {
             var errors = string.Join("; ", result.Errors.Select(e => e.Description));
@@ -30,4 +41,8 @@ public sealed class ConfirmEmailCommandHandler(UserManager<ApplicationUser> user
 
         return Unit.Value;
     }
+
+    private static bool HasConcurrencyError(IdentityResult result) =>
+        result.Errors.Any(e => e.Code == nameof(IdentityErrorDescriber.ConcurrencyFailure));
 }
+
