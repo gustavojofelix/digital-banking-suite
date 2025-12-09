@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 
 namespace BankingSuite.IamService.Infrastructure;
@@ -20,13 +21,28 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddIamInfrastructure(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration
+    )
     {
         // Database
         var connectionString = configuration.GetConnectionString("IamDatabase");
 
-        services.AddDbContext<IamDbContext>(options =>
-            options.UseNpgsql(connectionString));
+        services.AddDbContext<IamDbContext>(
+            (sp, options) =>
+            {
+                var env = sp.GetRequiredService<IHostEnvironment>();
+
+                if (env.IsEnvironment("IntegrationTests"))
+                {
+                    // 👉 Use InMemory provider when running integration tests
+                    options.UseInMemoryDatabase("iam_integration_tests_db");
+                }
+                else
+                {
+                    options.UseNpgsql(connectionString);
+                }
+            }
+        );
 
         // Identity
         services
@@ -56,7 +72,8 @@ public static class DependencyInjection
         // JWT options
         services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
 
-        var jwtOptions = configuration.GetSection(JwtOptions.SectionName).Get<JwtOptions>() ?? new JwtOptions();
+        var jwtOptions =
+            configuration.GetSection(JwtOptions.SectionName).Get<JwtOptions>() ?? new JwtOptions();
         var keyBytes = Encoding.UTF8.GetBytes(jwtOptions.Key);
 
         // Authentication + JWT bearer
@@ -79,7 +96,7 @@ public static class DependencyInjection
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
                     ValidateLifetime = true,
-                    ClockSkew = TimeSpan.FromMinutes(1)
+                    ClockSkew = TimeSpan.FromMinutes(1),
                 };
             });
 
