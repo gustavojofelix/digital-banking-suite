@@ -1,13 +1,16 @@
 import { getGreeting } from '../support/app.po';
 
-describe('iam-portal-e2e', () => {
-  beforeEach(() => cy.visit('/'));
+describe('iam-portal', () => {
+  beforeEach(() => {
+    // Visiting root should redirect to the login page
+    cy.visit('/');
+  });
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should redirect to login page and show login title', () => {
+    // Assert we are on /login
+    cy.url().should('include', '/login');
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    // Assert the login page title exists
+    cy.contains('h1', 'Login');
   });
 });

@@ -21,7 +21,10 @@
             "input": "apps/iam-portal/public"
           }
         ],
-        "styles": ["apps/iam-portal/src/styles.scss"]
+        "styles": ["apps/iam-portal/src/styles.scss"],
+        "define": {
+          "process.env.IAM_API_URL": "\"https://localhost:5001\""
+        }
       },
       "configurations": {
         "production": {
