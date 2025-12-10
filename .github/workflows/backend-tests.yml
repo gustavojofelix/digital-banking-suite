@@ -1,4 +1,4 @@
-name: Backend Tests & Coverage
+name: Tests & Coverage
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - main
 
 jobs:
-  tests:
+  backend-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -54,3 +54,30 @@ jobs:
         with:
           name: backend-coverage-report
           path: src/backend/coverage-report
+  frontend-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install frontend deps
+        working-directory: src/frontend
+        run: npm ci
+
+      - name: Lint iam-portal
+        working-directory: src/frontend
+        run: npx nx lint iam-portal
+
+      - name: Test iam-portal
+        working-directory: src/frontend
+        run: npx nx test iam-portal --configuration=ci
+
+      - name: Build iam-portal
+        working-directory: src/frontend
+        run: npx nx build iam-portal --configuration=production
