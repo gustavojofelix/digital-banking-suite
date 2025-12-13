@@ -37,7 +37,7 @@ public static class IamDbContextSeed
         }
 
         const string adminEmail = "admin@alvorbank.test";
-        const string adminPassword = "Admin123!";
+        const string adminPassword = "Admin123456!";
 
         var admin = await userManager.FindByEmailAsync(adminEmail);
 

@@ -105,7 +105,14 @@ public static class DependencyInjection
 
         // JWT service
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
-        services.AddScoped<IEmailSender, LoggingEmailSender>();
+
+        // Email configuration
+        services.Configure<EmailSettings>(configuration.GetSection("Email"));
+
+        // Default email sender (overridden in tests by TestEmailSender)
+        services.AddTransient<IEmailSender, SmtpEmailSender>();
+
+        //services.AddScoped<IEmailSender, LoggingEmailSender>();
 
         // MediatR - scan IAM Application assembly
         var applicationAssembly = Assembly.Load("BankingSuite.IamService.Application");

@@ -23,7 +23,7 @@
         ],
         "styles": ["apps/iam-portal/src/styles.scss"],
         "define": {
-          "process.env.IAM_API_URL": "\"https://localhost:5001\""
+          "process.env.IAM_API_URL": "\"http://localhost:5001\""
         }
       },
       "configurations": {

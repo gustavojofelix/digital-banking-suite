@@ -1,0 +1,95 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.guest-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6;
+}
+
+/* Header */
+
+.guest-header {
+  height: 64px;
+  background: linear-gradient(
+    to right,
+    #0f172a,
+    #1e293b
+  );
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.4);
+}
+
+.guest-header__content {
+  max-width: 1040px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guest-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.guest-header__logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background-color: rgba(15, 23, 42, 0.8);
+}
+
+.guest-header__brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-header__bank-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.guest-header__portal-name {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.guest-header__links {
+  font-size: 0.75rem;
+}
+
+.guest-header__link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.guest-header__link:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+
+.guest-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+.guest-main__center {
+  width: 100%;
+  max-width: 480px;
+}
