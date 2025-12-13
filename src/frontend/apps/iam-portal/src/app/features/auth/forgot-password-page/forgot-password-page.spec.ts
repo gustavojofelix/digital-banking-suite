@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { ForgotPasswordPage } from './forgot-password-page';
 
 describe('ForgotPasswordPage', () => {
@@ -7,7 +10,11 @@ describe('ForgotPasswordPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ForgotPasswordPage],
+      imports: [
+        ForgotPasswordPage,
+        HttpClientTestingModule, // Provides HttpClient for AuthApiService
+        RouterTestingModule, // Provides Router/ActivatedRoute if used
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ForgotPasswordPage);

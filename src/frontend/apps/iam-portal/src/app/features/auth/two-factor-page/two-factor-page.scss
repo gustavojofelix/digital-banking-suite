@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+/* Same width as login card for consistency */
+.page {
+  max-width: 420px;
+}
+
+.two-factor-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--bs-space-3);
+}
+
+.two-factor-actions .bs-btn {
+  min-width: 160px;
+}
+
+.two-factor-links {
+  margin-top: var(--bs-space-3);
+  font-size: var(--bs-font-size-xs);
+  text-align: right;
+}
+
+.two-factor-links a {
+  color: var(--bs-color-primary);
+  text-decoration: none;
+}
+
+.two-factor-links a:hover {
+  text-decoration: underline;
+}

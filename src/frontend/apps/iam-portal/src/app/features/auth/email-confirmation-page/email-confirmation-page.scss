@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.page {
+  max-width: 480px;
+}
+
+.confirmation-actions {
+  margin-top: var(--bs-space-4);
+  display: flex;
+  justify-content: flex-end;
+}

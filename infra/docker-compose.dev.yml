@@ -89,6 +89,46 @@ services:
     networks:
       - bankingsuite-network
 
+    # IAM Service API (.NET 10 + FastEndpoints)
+  iam-service:
+    container_name: iam-service
+    build:
+      # context is the repo root (one level above infra/)
+      context: ..
+      # Dockerfile path is relative to that repo root
+      dockerfile: src/backend/services/IamService/BankingSuite.IamService.Api/Dockerfile
+    depends_on:
+      - iam-db
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+
+      # Connection string must match what your IamService expects (key name)
+      # If your appsettings.json uses "ConnectionStrings:DefaultConnection" or similar,
+      # change the name below accordingly.
+      ConnectionStrings__IamDatabase: Host=iam-db;Port=5432;Database=iam_service_db;Username=iam_user;Password=iam_password;
+
+      # These must match your Angular routes
+      Iam__EmailConfirmationBaseUrl: http://localhost:4200/email-confirmation
+      Iam__PasswordResetBaseUrl: http://localhost:4200/reset-password
+
+      Email__FromName: "Alvor Bank IAM"
+      Email__FromAddress: "no-reply@alvorbank.test"
+      Email__Host: "sandbox.smtp.mailtrap.io"
+      Email__Port: "587"
+      Email__User: "eb31dfb6ec85a3"
+      Email__Password: "11a50f51b217bc"
+      Email__UseSsl: "true"
+
+      # Optional: if you use any JWT / issuer config via env, set here too
+      # Jwt__Issuer: ...
+      # Jwt__Audience: ...
+      # Jwt__Key: ...
+    ports:
+      - "5001:8080"
+    networks:
+      - bankingsuite-network
+
 networks:
   bankingsuite-network:
     driver: bridge

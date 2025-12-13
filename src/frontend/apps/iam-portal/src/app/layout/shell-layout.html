@@ -1,0 +1,55 @@
+<div class="shell">
+  <header class="shell-header">
+    <div class="shell-header__brand">
+      <span class="shell-header__logo">AB</span>
+      <div class="shell-header__titles">
+        <div class="shell-header__title">Alvor Bank</div>
+        <div class="shell-header__subtitle">Employee IAM Portal</div>
+      </div>
+    </div>
+
+    <nav class="shell-header__nav" *ngIf="isAuthenticated$ | async">
+      <a routerLink="/me/security" routerLinkActive="is-active">
+        My security
+      </a>
+      <a routerLink="/admin/employees" routerLinkActive="is-active">
+        Employees
+      </a>
+    </nav>
+
+    <div class="shell-header__user">
+      <ng-container *ngIf="isAuthenticated$ | async; else guestLinks">
+        <span class="shell-header__user-label">
+          Signed in
+          <!-- Placeholder for future user email/role -->
+        </span>
+        <button type="button" class="bs-btn bs-btn--ghost" (click)="signOut()">
+          Sign out
+        </button>
+      </ng-container>
+
+      <ng-template #guestLinks>
+        <a routerLink="/login" class="shell-header__login-link"> Sign in </a>
+      </ng-template>
+    </div>
+  </header>
+
+  <div class="shell-body">
+    <!-- Optional sidebar; if you already have one, integrate it here -->
+
+    <aside class="shell-sidebar">
+      <nav>
+        <a routerLink="/me/security" routerLinkActive="is-active">
+          My security
+        </a>
+        <a routerLink="/admin/employees" routerLinkActive="is-active">
+          Employees
+        </a>
+      </nav>
+    </aside>
+
+    <main class="shell-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -7,6 +7,19 @@ using FastEndpoints.Swagger; // 👈 important for SwaggerDocument / UseSwaggerG
 
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS: allow Angular dev origin
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontendDev", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+
 // FastEndpoints + Swagger (with JWT auth enabled by default)
 builder.Services
     .AddFastEndpoints()
@@ -32,7 +45,8 @@ builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 
 var app = builder.Build();
 
-
+// CORS must come before auth + FastEndpoints
+app.UseCors("FrontendDev");
 
 // existing middleware/endpoint configuration
 app.UseAuthentication();

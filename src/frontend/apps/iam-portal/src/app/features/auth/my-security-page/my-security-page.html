@@ -1,12 +1,247 @@
-<section class="page">
-  <h1>My Security Settings</h1>
-  <p>
-    An authenticated employee will use this screen to manage their own
-    credentials:
-  </p>
-  <ul>
-    <li>Change password (POST <code>/api/iam/auth/change-password</code>)</li>
-    <li>Enable 2FA (POST <code>/api/iam/auth/2fa/enable</code>)</li>
-    <li>Disable 2FA (POST <code>/api/iam/auth/2fa/disable</code>)</li>
-  </ul>
-</section>
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1 class="page-header__title">My security</h1>
+      <p class="page-header__subtitle">
+        Manage your password and two-factor authentication for the IAM portal.
+      </p>
+    </div>
+  </header>
+
+  <!-- Change password section -->
+  <section class="security-section">
+    <div class="security-section__header">
+      <h2 class="security-section__title">Change password</h2>
+      <p class="security-section__subtitle">
+        Update your password regularly to keep your Alvor Bank account secure.
+      </p>
+    </div>
+
+    <form
+      [formGroup]="changePasswordForm"
+      class="bs-form"
+      (ngSubmit)="onChangePasswordSubmit()"
+    >
+      <!-- Success -->
+      <div
+        *ngIf="changePasswordSuccess"
+        class="bs-alert bs-alert--success"
+        aria-live="polite"
+      >
+        <div>
+          <div class="bs-alert__title">Password updated</div>
+          <p class="bs-alert__body">{{ changePasswordSuccess }}</p>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div
+        *ngIf="changePasswordError"
+        class="bs-alert bs-alert--danger"
+        aria-live="polite"
+      >
+        <div>
+          <div class="bs-alert__title">Unable to update password</div>
+          <p class="bs-alert__body">{{ changePasswordError }}</p>
+        </div>
+      </div>
+
+      <!-- Current password -->
+      <div class="bs-form-field">
+        <label
+          class="bs-form-field__label bs-form-field__label--required"
+          for="currentPassword"
+        >
+          Current password
+        </label>
+        <div class="bs-form-field__control">
+          <input
+            id="currentPassword"
+            type="password"
+            autocomplete="current-password"
+            formControlName="currentPassword"
+          />
+        </div>
+        <p
+          class="bs-form-field__error"
+          *ngIf="currentPassword.touched && currentPassword.invalid"
+        >
+          Please enter your current password.
+        </p>
+      </div>
+
+      <!-- New password -->
+      <div class="bs-form-field">
+        <label
+          class="bs-form-field__label bs-form-field__label--required"
+          for="newPassword"
+        >
+          New password
+        </label>
+        <div class="bs-form-field__control">
+          <input
+            id="newPassword"
+            type="password"
+            autocomplete="new-password"
+            formControlName="newPassword"
+          />
+        </div>
+        <p class="bs-form-field__hint">
+          Use at least 8 characters and avoid reusing passwords from other
+          systems.
+        </p>
+        <p
+          class="bs-form-field__error"
+          *ngIf="newPassword.touched && newPassword.invalid"
+        >
+          Your password must be at least 8 characters long.
+        </p>
+      </div>
+
+      <!-- Confirm new password -->
+      <div class="bs-form-field">
+        <label
+          class="bs-form-field__label bs-form-field__label--required"
+          for="confirmNewPassword"
+        >
+          Confirm new password
+        </label>
+        <div class="bs-form-field__control">
+          <input
+            id="confirmNewPassword"
+            type="password"
+            autocomplete="new-password"
+            formControlName="confirmNewPassword"
+          />
+        </div>
+        <p
+          class="bs-form-field__error"
+          *ngIf="
+            confirmNewPassword.touched && confirmNewPassword.invalid
+          "
+        >
+          Please confirm your new password.
+        </p>
+        <p class="bs-form-field__error" *ngIf="hasPasswordMismatch">
+          The passwords do not match.
+        </p>
+      </div>
+
+      <div class="security-section__actions">
+        <button
+          class="bs-btn bs-btn--primary"
+          type="submit"
+          [disabled]="isChangingPassword"
+        >
+          <span *ngIf="!isChangingPassword">Update password</span>
+          <span *ngIf="isChangingPassword">Updating…</span>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Two-factor authentication section -->
+  <section class="security-section">
+    <div class="security-section__header security-section__header--with-tag">
+      <div>
+        <h2 class="security-section__title">Two-factor authentication</h2>
+        <p class="security-section__subtitle">
+          Add an extra layer of security by requiring a verification code during
+          sign-in.
+        </p>
+      </div>
+
+      <span
+        class="bs-tag"
+        [ngClass]="{
+          'bs-tag--success': isTwoFactorEnabled,
+          'bs-tag--neutral': !isTwoFactorEnabled
+        }"
+      >
+        <ng-container *ngIf="isTwoFactorEnabled; else twoFaDisabled">
+          2FA enabled
+        </ng-container>
+        <ng-template #twoFaDisabled>2FA disabled</ng-template>
+      </span>
+    </div>
+
+    <!-- Success -->
+    <div
+      *ngIf="twoFactorSuccess"
+      class="bs-alert bs-alert--success"
+      aria-live="polite"
+    >
+      <div>
+        <div class="bs-alert__title">Two-factor updated</div>
+        <p class="bs-alert__body">{{ twoFactorSuccess }}</p>
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div
+      *ngIf="twoFactorError"
+      class="bs-alert bs-alert--danger"
+      aria-live="polite"
+    >
+      <div>
+        <div class="bs-alert__title">Unable to update two-factor</div>
+        <p class="bs-alert__body">{{ twoFactorError }}</p>
+      </div>
+    </div>
+
+    <form
+      [formGroup]="twoFactorForm"
+      class="bs-form"
+      (ngSubmit)="$event.preventDefault()"
+    >
+      <div class="bs-form-field">
+        <label
+          class="bs-form-field__label bs-form-field__label--required"
+          for="twoFactorCurrentPassword"
+        >
+          Current password
+        </label>
+        <div class="bs-form-field__control">
+          <input
+            id="twoFactorCurrentPassword"
+            type="password"
+            autocomplete="current-password"
+            formControlName="currentPassword"
+          />
+        </div>
+        <p
+          class="bs-form-field__error"
+          *ngIf="
+            twoFactorCurrentPassword.touched &&
+            twoFactorCurrentPassword.invalid
+          "
+        >
+          Please enter your current password to change two-factor settings.
+        </p>
+      </div>
+
+      <div
+        class="security-section__actions security-section__actions--two-factor"
+      >
+        <button
+          class="bs-btn"
+          [ngClass]="{
+            'bs-btn--primary': !isTwoFactorEnabled,
+            'bs-btn--danger': isTwoFactorEnabled
+          }"
+          type="button"
+          (click)="isTwoFactorEnabled ? onDisableTwoFactor() : onEnableTwoFactor()"
+          [disabled]="isUpdatingTwoFactor"
+        >
+          <span *ngIf="!isUpdatingTwoFactor && !isTwoFactorEnabled">
+            Enable 2FA
+          </span>
+          <span *ngIf="!isUpdatingTwoFactor && isTwoFactorEnabled">
+            Disable 2FA
+          </span>
+          <span *ngIf="isUpdatingTwoFactor">Updating…</span>
+        </button>
+      </div>
+    </form>
+  </section>
+</div>

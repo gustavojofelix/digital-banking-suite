@@ -1,11 +1,48 @@
-<section class="page">
-  <h1>Email Confirmation</h1>
-  <p>
-    This page will read <code>userId</code> and <code>token</code> from the
-    query string and call <code>GET /api/iam/auth/confirm-email</code>.
-  </p>
-  <p>
-    The URL used in the email is configured by
-    <code>Iam:EmailConfirmationBaseUrl</code> on the backend.
-  </p>
-</section>
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1 class="page-header__title">Email confirmation</h1>
+      <p class="page-header__subtitle">
+        Finalizing the setup of your Alvor Bank account.
+      </p>
+    </div>
+  </header>
+
+  <!-- Loading state -->
+  <div *ngIf="isLoading" class="bs-alert bs-alert--info">
+    <div>
+      <div class="bs-alert__title">Checking your link…</div>
+      <p class="bs-alert__body">
+        Please wait while we confirm your email address.
+      </p>
+    </div>
+  </div>
+
+  <!-- Success state -->
+  <div *ngIf="!isLoading && isSuccess" class="bs-alert bs-alert--success">
+    <div>
+      <div class="bs-alert__title">Email confirmed</div>
+      <p class="bs-alert__body">
+        Your email address has been confirmed successfully. You can now sign in
+        to the IAM portal using your credentials.
+      </p>
+    </div>
+  </div>
+
+  <!-- Error state -->
+  <div
+    *ngIf="!isLoading && !isSuccess && errorMessage"
+    class="bs-alert bs-alert--danger"
+  >
+    <div>
+      <div class="bs-alert__title">Unable to confirm email</div>
+      <p class="bs-alert__body">{{ errorMessage }}</p>
+    </div>
+  </div>
+
+  <div class="confirmation-actions" *ngIf="!isLoading">
+    <button type="button" class="bs-btn bs-btn--primary" (click)="goToLogin()">
+      Go to sign in
+    </button>
+  </div>
+</div>

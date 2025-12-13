@@ -1,9 +1,61 @@
-<section class="page">
-  <h1>Two-Factor Verification</h1>
-  <p>Step 2 of authentication: enter the one-time 2FA code.</p>
-  <p>
-    This page will call <code>POST /api/iam/auth/2fa/verify</code> using the
-    <code>userId</code> provided by the login response when
-    <code>requiresTwoFactor = true</code>.
-  </p>
-</section>
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1 class="page-header__title">Two-step verification</h1>
+      <p class="page-header__subtitle">
+        Enter the verification code we sent to your registered email.
+      </p>
+    </div>
+  </header>
+
+  <form [formGroup]="form" class="bs-form" (ngSubmit)="onSubmit()">
+    <!-- Form-level error -->
+    <div *ngIf="formError" class="bs-alert bs-alert--danger">
+      <div>
+        <div class="bs-alert__title">Verification failed</div>
+        <p class="bs-alert__body">{{ formError }}</p>
+      </div>
+    </div>
+
+    <!-- Code -->
+    <div class="bs-form-field">
+      <label
+        class="bs-form-field__label bs-form-field__label--required"
+        for="code"
+      >
+        Verification code
+      </label>
+      <div class="bs-form-field__control">
+        <input
+          id="code"
+          type="text"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          formControlName="code"
+        />
+      </div>
+      <p class="bs-form-field__hint" *ngIf="!code.invalid || !code.touched">
+        Check your email for a one-time code.
+      </p>
+      <p class="bs-form-field__error" *ngIf="code.touched && code.invalid">
+        Please enter the verification code you received.
+      </p>
+    </div>
+
+    <!-- Actions -->
+    <div class="two-factor-actions">
+      <button
+        class="bs-btn bs-btn--primary"
+        type="submit"
+        [disabled]="isSubmitting"
+      >
+        <span *ngIf="!isSubmitting">Verify and continue</span>
+        <span *ngIf="isSubmitting">Verifying…</span>
+      </button>
+    </div>
+  </form>
+
+  <div class="two-factor-links">
+    <a routerLink="/login">Back to sign in</a>
+  </div>
+</div>

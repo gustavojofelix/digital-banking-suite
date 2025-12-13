@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { TwoFactorPage } from './two-factor-page';
 
 describe('TwoFactorPage', () => {
@@ -7,7 +10,11 @@ describe('TwoFactorPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TwoFactorPage],
+      imports: [
+        TwoFactorPage,
+        HttpClientTestingModule, // <-- provides HttpClient for AuthApiService
+        RouterTestingModule, // <-- avoids router-related provider errors
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TwoFactorPage);

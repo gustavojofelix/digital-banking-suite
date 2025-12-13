@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+/* Narrower card for login than generic pages */
+.page {
+  max-width: 420px;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--bs-space-3);
+}
+
+.login-actions .bs-btn {
+  min-width: 120px;
+}
+
+.login-links {
+  margin-top: var(--bs-space-3);
+  font-size: var(--bs-font-size-xs);
+  text-align: right;
+}
+
+.login-links a {
+  color: var(--bs-color-primary);
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
