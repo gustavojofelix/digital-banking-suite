@@ -5,12 +5,12 @@ import { EmailConfirmationPage } from './features/auth/email-confirmation-page/e
 import { ForgotPasswordPage } from './features/auth/forgot-password-page/forgot-password-page';
 import { ResetPasswordPage } from './features/auth/reset-password-page/reset-password-page';
 import { MySecurityPage } from './features/auth/my-security-page/my-security-page';
-import { EmployeesPage } from './features/admin/employees/employees-page/employees-page';
-import { EmployeeDetailsPage } from './features/admin/employees/employee-details-page/employee-details-page';
 import { guestGuard } from './core/auth/guards/guest-guard';
 import { authGuard } from './core/auth/guards/auth-guard';
 import { ShellLayout } from './layout/shell-layout';
 import { GuestLayout } from './layout/guest-layout';
+import { EmployeesPage } from './features/admin/employees/pages/employees-page';
+import { EmployeeDetailsPage } from './features/admin/employees/pages/employee-details-page';
 
 export const appRoutes: Route[] = [
   // -------- Guest area (no main nav) --------

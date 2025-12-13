@@ -1,0 +1,157 @@
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="page-header__title">Employee details</div>
+      <div class="page-header__subtitle">
+        Review status and update access settings.
+      </div>
+    </div>
+
+    <div class="page-header__actions">
+      <button class="bs-btn" type="button" (click)="backToList()">Back</button>
+    </div>
+  </div>
+
+  <ng-container *ngIf="vm$ | async as vm">
+    <div *ngIf="vm.error" class="bs-alert bs-alert--danger">{{ vm.error }}</div>
+    <div *ngIf="vm.success" class="bs-alert">{{ vm.success }}</div>
+
+    <div *ngIf="vm.isLoading" class="muted">Loading employee…</div>
+
+    <ng-container *ngIf="!vm.isLoading && vm.employee as e">
+      <div class="grid">
+        <!-- Left: Profile / Edit -->
+        <div class="card">
+          <div class="card__header">
+            <div class="card__title">Profile</div>
+            <div class="card__subtitle">Editable fields</div>
+          </div>
+
+          <div class="card__body">
+            <div class="bs-form">
+              <div class="bs-form-field">
+                <label class="bs-form-field__label" for="fullName"
+                  >Full name</label
+                >
+                <input
+                  id="fullName"
+                  class="bs-form-field__control"
+                  type="text"
+                  [formControl]="form.controls.fullName"
+                />
+                <div
+                  class="bs-form-field__error"
+                  *ngIf="form.controls.fullName.touched && form.controls.fullName.invalid"
+                >
+                  Full name is required (min 2 characters).
+                </div>
+              </div>
+
+              <div class="bs-form-field">
+                <label class="bs-form-field__label" for="phoneNumber"
+                  >Phone number</label
+                >
+                <input
+                  id="phoneNumber"
+                  class="bs-form-field__control"
+                  type="text"
+                  [formControl]="form.controls.phoneNumber"
+                  placeholder="+27..."
+                />
+              </div>
+
+              <div class="bs-form-field">
+                <label class="bs-form-field__label" for="roles">Roles</label>
+                <app-roles-multi-select
+                  id="roles"
+                  [selected]="form.controls.roles.value"
+                  (selectedChange)="setRoles($event)"
+                ></app-roles-multi-select>
+              </div>
+
+              <div class="actions">
+                <button
+                  class="bs-btn bs-btn--primary"
+                  type="button"
+                  [disabled]="vm.isSaving"
+                  (click)="save()"
+                >
+                  {{ vm.isSaving ? 'Saving…' : 'Save changes' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Status / Actions -->
+        <div class="card">
+          <div class="card__header">
+            <div class="card__title">Security & status</div>
+            <div class="card__subtitle">View-only fields</div>
+          </div>
+
+          <div class="card__body">
+            <div class="kv">
+              <div class="kv__row">
+                <div class="kv__k">Email</div>
+                <div class="kv__v">{{ e.email }}</div>
+              </div>
+
+              <div class="kv__row">
+                <div class="kv__k">Status</div>
+                <div class="kv__v">
+                  <span class="chip" [class.chip--danger]="!e.isActive"
+                    >{{ e.isActive ? 'Active' : 'Inactive' }}</span
+                  >
+                </div>
+              </div>
+
+              <div class="kv__row">
+                <div class="kv__k">Email confirmed</div>
+                <div class="kv__v">
+                  <span class="chip" [class.chip--warn]="!e.emailConfirmed">
+                    {{ e.emailConfirmed ? 'Confirmed' : 'Not confirmed' }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="kv__row">
+                <div class="kv__k">2FA</div>
+                <div class="kv__v">
+                  <span class="chip" [class.chip--warn]="!e.twoFactorEnabled">
+                    {{ e.twoFactorEnabled ? 'Enabled' : 'Disabled' }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="kv__row" *ngIf="e.lastLoginUtc">
+                <div class="kv__k">Last login</div>
+                <div class="kv__v">{{ e.lastLoginUtc }}</div>
+              </div>
+            </div>
+
+            <div class="actions actions--split">
+              <button
+                class="bs-btn"
+                type="button"
+                [disabled]="vm.isSaving || e.isActive"
+                (click)="activate()"
+              >
+                Activate
+              </button>
+
+              <button
+                class="bs-btn"
+                type="button"
+                [disabled]="vm.isSaving || !e.isActive"
+                (click)="deactivate()"
+              >
+                Deactivate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

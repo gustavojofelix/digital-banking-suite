@@ -1,0 +1,12 @@
+<div class="roles">
+  <div class="roles__hint">Assign one or more roles for access control.</div>
+
+  <label class="roles__item" *ngFor="let role of roles">
+    <input
+      type="checkbox"
+      [checked]="isChecked(role)"
+      (change)="toggle(role, ($any($event.target)).checked)"
+    />
+    <span>{{ role }}</span>
+  </label>
+</div>
