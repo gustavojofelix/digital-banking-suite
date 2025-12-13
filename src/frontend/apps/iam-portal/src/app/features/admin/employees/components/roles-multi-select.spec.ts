@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EmployeesPage } from './employees-page';
+import { RolesMultiSelect } from './roles-multi-select';
 
-describe('EmployeesPage', () => {
-  let component: EmployeesPage;
-  let fixture: ComponentFixture<EmployeesPage>;
+describe('RolesMultiSelect', () => {
+  let component: RolesMultiSelect;
+  let fixture: ComponentFixture<RolesMultiSelect>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmployeesPage],
+      imports: [RolesMultiSelect],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(EmployeesPage);
+    fixture = TestBed.createComponent(RolesMultiSelect);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

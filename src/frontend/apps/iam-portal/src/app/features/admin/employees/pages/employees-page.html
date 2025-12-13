@@ -1,0 +1,125 @@
+<div class="table-page employees-page">
+  <div class="page-header">
+    <div>
+      <div class="page-header__title">Employees</div>
+      <div class="page-header__subtitle">
+        Search, review status, and manage access for internal bank users.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__body">
+      <div class="toolbar">
+        <div class="bs-form-field">
+          <label class="bs-form-field__label" for="search">Search</label>
+          <input
+            id="search"
+            class="bs-form-field__control"
+            type="text"
+            [formControl]="search"
+            placeholder="Search by email or full name"
+          />
+        </div>
+
+        <div class="toolbar__right">
+          <label class="toggle">
+            <input type="checkbox" [formControl]="includeInactive" />
+            <span>Include inactive</span>
+          </label>
+
+          <div class="bs-form-field">
+            <label class="bs-form-field__label" for="pageSize">Page size</label>
+            <select
+              id="pageSize"
+              class="bs-form-field__control"
+              (change)="onPageSizeChange(($any($event.target)).value)"
+            >
+              <option *ngFor="let n of pageSizeOptions" [value]="n">
+                {{ n }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <ng-container *ngIf="vm$ | async as vm">
+        <div *ngIf="vm.error" class="bs-alert bs-alert--danger">
+          {{ vm.error }}
+        </div>
+
+        <div *ngIf="vm.isLoading" class="muted">Loading employees…</div>
+
+        <ng-container *ngIf="!vm.isLoading && vm.result">
+          <div class="table-wrap">
+            <table class="table" aria-label="Employees table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Security</th>
+                  <th>Roles</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr
+                  *ngFor="let e of vm.result.items"
+                  class="row-link"
+                  tabindex="0"
+                  (click)="openEmployee(e.id)"
+                  (keydown.enter)="openEmployee(e.id)"
+                >
+                  <td class="truncate">{{ e.fullName }}</td>
+                  <td class="truncate">{{ e.email }}</td>
+
+                  <td>
+                    <span class="chip" [class.chip--danger]="!e.isActive">
+                      {{ e.isActive ? 'Active' : 'Inactive' }}
+                    </span>
+
+                    <span class="chip" [class.chip--warn]="!e.emailConfirmed">
+                      {{ e.emailConfirmed ? 'Email confirmed' : 'Email not
+                      confirmed' }}
+                    </span>
+                  </td>
+
+                  <td>
+                    <span class="chip" [class.chip--warn]="!e.twoFactorEnabled">
+                      {{ e.twoFactorEnabled ? '2FA enabled' : '2FA disabled' }}
+                    </span>
+                  </td>
+
+                  <td class="roles-cell">{{ e.roles.join(', ') }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pager">
+            <button
+              class="bs-btn"
+              [disabled]="vm.query.pageNumber <= 1"
+              (click)="previousPage(vm.query.pageNumber)"
+            >
+              Previous
+            </button>
+
+            <div class="pager__meta">
+              Page {{ vm.query.pageNumber }} • Total {{ vm.result.totalCount }}
+            </div>
+
+            <button
+              class="bs-btn"
+              [disabled]="(vm.query.pageNumber * vm.query.pageSize) >= vm.result.totalCount"
+              (click)="nextPage(vm.query.pageNumber)"
+            >
+              Next
+            </button>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

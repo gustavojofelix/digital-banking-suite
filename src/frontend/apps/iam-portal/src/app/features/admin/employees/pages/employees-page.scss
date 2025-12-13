@@ -1,0 +1,121 @@
+.employees-page {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden; // prevents visual spill outside the card
+}
+
+.card__body {
+  padding: 16px;
+  max-width: 100%;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+.toolbar__right {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+
+.toggle {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  user-select: none;
+  color: #333;
+}
+
+.table-wrap {
+ width: 100%;
+ max-width: 100%;
+overflow-x: auto; // horizontal scroll only if needed
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  //table-layout: fixed; // stops long content from stretching the whole table
+}
+
+.table th,
+.table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  min-width: 0; // required for ellipsis in fixed-layout tables
+}
+
+ .truncate {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+ }
+
+ .roles-cell {
+   white-space: normal;      // allow wrapping
+   overflow-wrap: anywhere;  // break long role strings safely
+ }
+
+.row-link {
+  cursor: pointer;
+}
+
+.row-link:hover {
+  background: #fafafa;
+}
+
+.row-link:focus {
+  outline: 2px solid rgba(33, 150, 243, 0.35);
+  outline-offset: -2px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-right: 6px;
+  background: #eef5ff;
+  color: #0b3a6a;
+}
+
+.chip--danger {
+  background: #ffebee;
+  color: #8a1c1c;
+}
+
+.chip--warn {
+  background: #fff8e1;
+  color: #6a4b00;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.pager__meta {
+  color: #666;
+  font-size: 13px;
+}
+
+.muted {
+  color: #666;
+}

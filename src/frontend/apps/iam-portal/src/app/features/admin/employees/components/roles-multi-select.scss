@@ -1,0 +1,17 @@
+.roles {
+  display: grid;
+  gap: 8px;
+}
+
+.roles__hint {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.roles__item {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  user-select: none;
+}
